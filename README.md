@@ -8,7 +8,7 @@ the actual System Profile shape.
 
 ## Technical Details ##
 
-[System Profile] specification is written in YAML containing a [JSON Schema]. All entities are under _$def_ root key, internal references (_$ref_) use relative referencing (_#/$def/entity_).
+[System Profile] specification is written in YAML containing an [OpenAPI 3.0](https://swagger.io/specification/) definition schema. All entities are under _$def_ root key, internal references (_$ref_) use relative referencing (_#/$def/entity_).
 
 Document version is reflected in the filename (_v1.yaml_) and under _$version_ root key. _$id_ is a file name used in
 the Host Inventory.
@@ -20,4 +20,4 @@ the Host Inventory.
 
 [Host Inventory]: https://github.com/RedHatInsights/insights-host-inventory/
 [System Profile]: schemas/system_profile/
-[JSON Schema]: https://json-schema.org/
+[OpenAPI 3.0]: https://swagger.io/specification/
