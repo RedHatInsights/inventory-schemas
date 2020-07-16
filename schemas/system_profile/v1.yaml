@@ -102,7 +102,6 @@ $defs:
         type: string
         example: "ether"
   SystemProfile:
-    $id: SystemProfile
     title: System profile fields
     description: Representation of the system profile fields
     type: object
