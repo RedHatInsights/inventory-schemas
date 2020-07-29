@@ -30,7 +30,6 @@ rules:
 
 # TODO: remove these exceptions as we clean up the schema and clarify  in RHCLOUD-8147
 except:
-  'schemas/system_profile/v1.yaml#/$defs/DiskDevice/properties/device': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/DiskDevice/properties/label': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/DiskDevice/properties/options/properties/name': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/DiskDevice/properties/options/properties/value': ['property-example', 'property-description']

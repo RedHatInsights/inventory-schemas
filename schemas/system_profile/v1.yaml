@@ -10,6 +10,10 @@ $defs:
       device:
         example: "/dev/fdd0"
         type: string
+      notSnakeCase:
+        description: user-defined mount label
+        example: nyaaaa~!
+        type: string
       label:
         description: user-defined mount label
         type: string
