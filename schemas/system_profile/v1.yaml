@@ -1,5 +1,6 @@
 ---
 $id: system_profile.spec.yaml
+$schema: https://json-schema.org/draft/2019-09/schema#
 $version: 1
 $defs:
   DiskDevice:
