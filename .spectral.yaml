@@ -11,18 +11,18 @@ rules:
         match: '^[a-z]+[a-z0-9_]*[a-z0-9]+$'
 
   property-description:
-    description: Every property should define a description
+    description: Every non-array property should define a description
     message: "{{path}} does not define description"
-    given: $..properties[?(@.type == 'string' || @.type == 'integer' || @.type == 'number' || @.type == 'boolean')]
+    given: $..properties[?(@.type != 'array')]
     severity: error
     then:
       field: description
       function: truthy
 
   property-example:
-    description: Every property should define an example
+    description: Every scalar property (except for boolean) should define an example
     message: "{{path}} does not define an example"
-    given: $..properties[?(@.type == 'string' || @.type == 'integer' || @.type == 'number')]
+    given: $..properties[?(@.type != 'array' && @.type != 'object' && @.type != 'boolean')]
     severity: error
     then:
       field: example
