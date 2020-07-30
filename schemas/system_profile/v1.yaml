@@ -118,8 +118,10 @@ $defs:
         format: int64
       infrastructure_type:
         type: string
+        maxLength: 100
       infrastructure_vendor:
         type: string
+        maxLength: 100
       network_interfaces:
         type: array  # techincally a set, ordering is not important
         items:
@@ -130,42 +132,55 @@ $defs:
           $ref: '#/$defs/DiskDevice'
       bios_vendor:
         type: string
+        maxLength: 100
       bios_version:
         type: string
+        maxLength: 100
       bios_release_date:
         type: string
+        maxLength: 50
       cpu_flags:
         items:
           type: string
+          maxLength: 30
         type: array
       os_release:
         type: string
+        maxLength: 100
       os_kernel_version:
         type: string
+        maxLength: 100
       arch:
         type: string
+        maxLength: 50
       kernel_modules:
         type: array
         items:
           type: string
+          maxLength: 255
       last_boot_time:
         type: string
         format: date-time
+        maxLength: 50
       running_processes:
         type: array  # techincally a set, ordering is not important
         items:
           description: a single running process. This will be truncated to 1000 characters when saved.
           type: string
+          maxLength: 1000
       subscription_status:
         type: string
+        maxLength: 100
       subscription_auto_attach:
         type: string
+        maxLength: 100
       katello_agent_running:
         type: boolean
       satellite_managed:
         type: boolean
       cloud_provider:
         type: string
+        maxLength: 100
       yum_repos:
         type: array  # technically a set, ordering is not important
         items:
@@ -180,24 +195,30 @@ $defs:
           $ref: '#/$defs/InstalledProduct'
       insights_client_version:
         type: string
+        maxLength: 50
       insights_egg_version:
         type: string
+        maxLength: 50
       captured_date:
         type: string
+        maxLength: 32
       installed_packages:
         type: array  # technically a set, ordering is not important
         items:
           description: a NEVRA string for a single installed package
           type: string
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
+          maxLength: 512
       installed_services:
         type: array
         items:
           type: string
+          maxLength: 512
       enabled_services:
         type: array
         items:
           type: string
+          maxLength: 512
       sap_system:
         type: boolean
         description: Indicates if SAP is installed on the system
