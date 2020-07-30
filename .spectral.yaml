@@ -13,16 +13,16 @@ rules:
   property-description:
     description: Every non-array type should define a description
     message: "{{path}} does not define description"
-    given: $..[?(@property=='items' || (@parentProperty=='properties' && @.type != 'array'))]
+    given: $..[?((@property=='items' || @parentProperty=='properties') && @.type != 'array')]
     severity: error
     then:
       field: description
       function: truthy
 
   property-example:
-    description: Every string or numeric property should define an example
+    description: Scalar types (except for boolean) should define an example
     message: "{{path}} does not define an example"
-    given: $..[?((@property=='items' || @parentProperty=='properties') && (@.type == 'string' || @.type == 'integer' || @.type == 'number'))]
+    given: $..[?((@property=='items' || @parentProperty=='properties') && @.type != 'array' && @.type != 'object' && @.type != 'boolean' && @.type != null)]
     severity: error
     then:
       field: example
