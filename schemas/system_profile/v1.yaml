@@ -116,7 +116,6 @@ $defs:
         maxLength: 18
   SystemProfile:
     description: Representation of the system profile fields
-    type: object
     properties:
       number_of_cpus:
         type: integer
