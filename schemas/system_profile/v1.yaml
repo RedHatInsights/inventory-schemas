@@ -10,9 +10,11 @@ $defs:
       device:
         example: "/dev/fdd0"
         type: string
+        maxLength: 2048
       label:
         description: user-defined mount label
         type: string
+        maxLength: 1024
       options:
         description: mount options
         example:
@@ -28,18 +30,22 @@ $defs:
         description: mount point
         example: "/mnt/remote_nfs_shares"
         type: string
+        maxLength: 2048
       type:
         description: mount type
         example: "ext3"
         type: string
+        maxLength: 256
   YumRepo:
     title: Yum Repository
     description: Representation of one yum repository
     properties:
       id:
         type: string
+        maxLength: 256
       name:
         type: string
+        maxLength: 1024
       gpgcheck:
         type: boolean
       enabled:
@@ -47,28 +53,34 @@ $defs:
       baseurl:
         type: string
         format: uri
+        maxLength: 2048
   DnfModule:
     title: DNF Module
     description: Representation of one DNF module
     properties:
       name:
         type: string
+        maxLength: 128
       stream:
         type: string
+        maxLength: 2048
   InstalledProduct:
     title: Installed Product
     description: Representation of one installed product
     properties:
       name:
         type: string
+        maxLength: 512
       id:
         description: the product ID
         example: "71"
         type: string
+        maxLength: 64
       status:
         description: subscription status for product
         example: "Subscribed"
         type: string
+        maxLength: 256
   NetworkInterface:
     title: Network Interface
     description: Representation of one network interface
@@ -90,18 +102,23 @@ $defs:
         description: MAC address (with or without colons)
         example: "00:00:00:00:00:00"
         type: string
+        maxLength: 59
       name:
         description: name of interface
         type: string
         example: eth0
+        minLength: 1
+        maxLength: 50
       state:
         description: interface state (UP, DOWN, UNKNOWN)
         type: string
         example: "UP"
+        maxLength: 25
       type:
         description: interface type (ether, loopback)
         type: string
         example: "ether"
+        maxLength: 18
   SystemProfile:
     title: System profile fields
     description: Representation of the system profile fields
