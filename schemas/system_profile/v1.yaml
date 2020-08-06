@@ -161,6 +161,12 @@ $defs:
           type: string
           maxLength: 30
         type: array
+      os_release_major:
+        type: int
+        maxLength: 4
+      os_release_minor:
+        type: int
+        maxLength: 4
       os_release:
         type: string
         maxLength: 100
