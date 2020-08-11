@@ -1,13 +1,14 @@
-import yaml
-import json
-import sys
-from jsonschema import validate
+from sys import argv
 
-schema_path = sys.argv[1]
-sample_path = sys.argv[2]
+from json import load as json_load
+from jsonschema import validate as jsonschema_validate
+from yaml import safe_load as yaml_safe_load
+
+schema_path = argv[1]
+sample_path = argv[2]
 
 with open(sample_path, 'r') as sample_data:
     with open(schema_path, 'r') as schema_data:
-        schema_dict = yaml.safe_load(schema_data)
-        sample_dict = json.load(sample_data)
-        validate(instance=sample_dict, schema=schema_dict)
+        schema_dict = yaml_safe_load(schema_data)
+        sample_dict = json_load(sample_data)
+        jsonschema_validate(instance=sample_dict, schema=schema_dict)
