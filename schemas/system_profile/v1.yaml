@@ -2,6 +2,11 @@
 $id: system_profile.spec.yaml
 $schema: https://json-schema.org/draft/2019-09/schema#
 $defs:
+  NestedObject:
+    propertyNames:
+      minLength: 1
+    additionalProperties:
+      "$ref": "#/$defs/NestedObject"
   DiskDevice:
     description: Representation of one mounted device
     properties:
@@ -18,9 +23,7 @@ $defs:
         example:
           uid: "0"
           ro: true
-        type: object
-        propertyNames:
-          minLength: 1
+        "$ref": "#/$defs/NestedObject"
       mount_point:
         description: mount point
         example: "/mnt/remote_nfs_shares"
