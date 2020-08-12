@@ -19,11 +19,8 @@ $defs:
           uid: "0"
           ro: true
         type: object
-        properties:
-          name:
-            type: string
-          value:
-            type: string
+        propertyNames:
+          minLength: 1
       mount_point:
         description: mount point
         example: "/mnt/remote_nfs_shares"
