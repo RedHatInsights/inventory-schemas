@@ -1,6 +1,6 @@
 ---
 $id: system_profile.spec.yaml
-$schema: https://json-schema.org/draft/2019-09/schema#
+$schema: http://json-schema.org/draft-07/schema#
 $defs:
   DiskDevice:
     description: Representation of one mounted device
