@@ -2,6 +2,12 @@
 $id: system_profile.spec.yaml
 $schema: https://json-schema.org/draft/2019-09/schema#
 $defs:
+  NestedObject:
+    description: An arbitrary object that doesn’t allow empty string keys.
+    propertyNames:
+      minLength: 1
+    additionalProperties:
+      "$ref": "#/$defs/NestedObject"
   DiskDevice:
     description: Representation of one mounted device
     properties:
@@ -18,12 +24,7 @@ $defs:
         example:
           uid: "0"
           ro: true
-        type: object
-        properties:
-          name:
-            type: string
-          value:
-            type: string
+        "$ref": "#/$defs/NestedObject"
       mount_point:
         description: mount point
         example: "/mnt/remote_nfs_shares"
