@@ -3,6 +3,7 @@ $id: system_profile.spec.yaml
 $schema: http://json-schema.org/draft-07/schema#
 $defs:
   NestedObject:
+    type: object
     description: An arbitrary object that doesn’t allow empty string keys.
     propertyNames:
       minLength: 1
@@ -54,6 +55,7 @@ $defs:
         maxLength: 2048
   DnfModule:
     description: Representation of one DNF module
+    type: object
     properties:
       name:
         type: string
@@ -63,6 +65,7 @@ $defs:
         maxLength: 2048
   InstalledProduct:
     description: Representation of one installed product
+    type: object
     properties:
       name:
         type: string
@@ -79,6 +82,7 @@ $defs:
         maxLength: 256
   NetworkInterface:
     description: Representation of one network interface
+    type: object
     properties:
       ipv4_addresses:
         type: array
@@ -116,6 +120,7 @@ $defs:
         maxLength: 18
   SystemProfile:
     description: Representation of the system profile fields
+    type: object
     properties:
       number_of_cpus:
         type: integer
@@ -216,8 +221,8 @@ $defs:
         type: array  # technically a set, ordering is not important
         items:
           description: a NEVRA string for a single installed package
-          type: string
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
+          type: string
           maxLength: 512
       installed_services:
         type: array
