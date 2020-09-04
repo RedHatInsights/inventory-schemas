@@ -11,6 +11,7 @@ $defs:
       "$ref": "#/$defs/NestedObject"
   DiskDevice:
     description: Representation of one mounted device
+    type: object
     properties:
       device:
         example: "/dev/fdd0"
@@ -38,6 +39,7 @@ $defs:
         maxLength: 256
   YumRepo:
     description: Representation of one yum repository
+    type: object
     properties:
       id:
         type: string
