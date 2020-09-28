@@ -18,22 +18,22 @@ $defs:
         type: string
         maxLength: 2048
       label:
-        description: user-defined mount label
+        description: User-defined mount label
         type: string
         maxLength: 1024
       options:
-        description: mount options
+        description: Mount options for nested object
         example:
           uid: "0"
           ro: true
         "$ref": "#/$defs/NestedObject"
       mount_point:
-        description: mount point
+        description: The mount point
         example: "/mnt/remote_nfs_shares"
         type: string
         maxLength: 2048
       type:
-        description: mount type
+        description: The mount type
         example: "ext3"
         type: string
         maxLength: 256
@@ -73,12 +73,12 @@ $defs:
         type: string
         maxLength: 512
       id:
-        description: the product ID
+        description: The product ID
         example: "71"
         type: string
         maxLength: 64
       status:
-        description: subscription status for product
+        description: Subscription status for product
         example: "Subscribed"
         type: string
         maxLength: 256
@@ -91,13 +91,15 @@ $defs:
         items:
           type: string
           format: ipv4
+          maxLength: 15
       ipv6_addresses:
         type: array
         items:
           type: string
           format: ipv6
+          maxLength: 45
       mtu:
-        description: MTU
+        description: MTU (Maximum transmission unit)
         type: integer
       mac_address:
         description: MAC address (with or without colons)
@@ -105,18 +107,18 @@ $defs:
         type: string
         maxLength: 59
       name:
-        description: name of interface
+        description: Name of interface
         type: string
         example: eth0
         minLength: 1
         maxLength: 50
       state:
-        description: interface state (UP, DOWN, UNKNOWN)
+        description: Interface state (UP, DOWN, UNKNOWN)
         type: string
         example: "UP"
         maxLength: 25
       type:
-        description: interface type (ether, loopback)
+        description: Interface type (ether, loopback)
         type: string
         example: "ether"
         maxLength: 18
@@ -182,7 +184,7 @@ $defs:
       running_processes:
         type: array  # techincally a set, ordering is not important
         items:
-          description: a single running process. This will be truncated to 1000 characters when saved.
+          description: A single running process. This will be truncated to 1000 characters when saved.
           type: string
           maxLength: 1000
       subscription_status:
@@ -222,7 +224,7 @@ $defs:
       installed_packages:
         type: array  # technically a set, ordering is not important
         items:
-          description: a NEVRA string for a single installed package
+          description: A NEVRA string for a single installed package
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
           type: string
           maxLength: 512
