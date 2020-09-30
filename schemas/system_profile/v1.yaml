@@ -89,11 +89,15 @@ $defs:
       ipv4_addresses:
         type: array
         items:
+          description: The ipv4 address of the system
+          example: "123.456.789.012"
           type: string
           format: ipv4
       ipv6_addresses:
         type: array
         items:
+          description: The ipv6 address of the system
+          example: "0123:4567:89ab:cdef:0123:4567:89ab:cdef"
           type: string
           format: ipv6
       mtu:
