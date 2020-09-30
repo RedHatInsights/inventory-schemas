@@ -91,13 +91,11 @@ $defs:
         items:
           type: string
           format: ipv4
-          maxLength: 15
       ipv6_addresses:
         type: array
         items:
           type: string
           format: ipv6
-          maxLength: 45
       mtu:
         description: MTU (Maximum transmission unit)
         type: integer
