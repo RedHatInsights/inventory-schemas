@@ -45,7 +45,7 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: '^[A-Z]+\s*\S+(?:\s+\S+){2,}\s*$'
+        match: '^[A-Z]*\s*\S+(?:\s+\S+){2,}\s*$'
 
   property-arbitrary-object-without-keys:
     description: Every object should have defined keys
