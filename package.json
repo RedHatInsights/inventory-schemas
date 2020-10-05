@@ -1,0 +1,22 @@
+{
+  "name": "inventory-schemas",
+  "version": "1.0.0",
+  "description": "This is a place to store API specifications and schemas for the [Host Inventory]. Currently it is used only for [System Profile].",
+  "main": "index.js",
+  "scripts": {
+    "lint": "spectral lint schemas/system_profile/v1.yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHatInsights/inventory-schemas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedHatInsights/inventory-schemas.git/issues"
+  },
+  "homepage": "https://github.com/RedHatInsights/inventory-schemas.git#readme",
+  "dependencies": {
+    "@stoplight/spectral": "^5.6.0"
+  }
+}
