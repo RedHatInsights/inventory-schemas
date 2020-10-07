@@ -32,7 +32,7 @@ the Host Inventory.
 
 4. In the event that the report is unsatisfactory (e.g. it shows a high number of failures from one or multiple reporters), the PR owner must coordinate with the HBI team and the stakeholders from the reporter(s) that show failures. Together, they must decide whether to change the PR or to update the reporter(s).
 
-5. If the pull request was opened to add a new field rather than update a pre-existing one, no report like the one above needs to be generated and someone from the HBI team can merge it if there are no concerns.
+5. If the pull request was opened to add a new field rather than update a pre-existing one, no report like the one above needs to be generated. Someone from the HBI team can merge it if there are no concerns.
 
 6. Once the PR is merged, the HBI team member who merged it can open another PR in the HBI repository to reflect those changes.
 
@@ -42,10 +42,6 @@ the Host Inventory.
 * Yupana - [Chris Duryee](https://github.com/beav)
 * Puptoo - [Stephen Adams](https://github.com/stevehnh)
 * BU - [Jerome Marc](https://github.com/jeromemarc)
-
-## To do ##
-
-- [ ] Write more to do items
 
 
 [Host Inventory]: https://github.com/RedHatInsights/insights-host-inventory/
