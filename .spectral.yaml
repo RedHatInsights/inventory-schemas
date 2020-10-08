@@ -67,7 +67,7 @@ except:
   'schemas/system_profile/v1.yaml#/$defs/YumRepo/properties/name': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/YumRepo/properties/gpgcheck': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/YumRepo/properties/enabled': ['property-example', 'property-description']
-  'schemas/system_profile/v1.yaml#/$defs/YumRepo/properties/baseurl': ['property-example', 'property-description']
+  'schemas/system_profile/v1.yaml#/$defs/YumRepo/properties/base_url': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/DnfModule/properties/name': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/DnfModule/properties/stream': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/InstalledProduct/properties/name': ['property-example', 'property-description']
