@@ -35,11 +35,19 @@ def main(argv):
         return
     
     if argv[1] == 'str':
-        if argv[2] == 'max_length':
+        if argv[2] == 'max-length':
             query = queries.string_max_length(argv[0], int(argv[3]))
         if argv[2] == 'pattern':
             query = queries.string_match_regex(argv[0], argv[3])
+
+    if argv[1] == 'arr':
+        query = queries.arr_query(argv[0], argv[2], argv[3])
     
+    if argv[1] == 'nested-arr':
+        query = queries.nested_query(argv[0], 'arr', argv[3])
+    if argv == 'nested-str':
+        query = queries.nested_query(argv[0], 'str', argv[3])
+
     if len(query) > 0:
         now = datetime.now()
         output_filename = now.strftime("%Y-%m-%d")+"-list-matches-"+argv[0]
