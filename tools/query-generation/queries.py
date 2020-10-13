@@ -28,6 +28,7 @@ class SelectQueries:
                 json_path += "."+v+"[*]"
 
         regex_exp = ""
+
         if field_type == 'str':
             if operation == 'max-length':
                 regex_exp = f"{json_path} ? (@.{path_objs[-1]} like_regex \"^.{{0,{value}}}$\")"
@@ -44,4 +45,4 @@ class SelectQueries:
             
             query = f"SELECT reporter, CASE WHEN system_profile_facts @? '{json_path}' is false THEN 'n/a' WHEN system_profile_facts @? '{regex_exp}' is true THEN 'pass' ELSE 'fail' END case_result, count(id) FROM hosts GROUP BY reporter, case_result;"
 
-        
+        return query

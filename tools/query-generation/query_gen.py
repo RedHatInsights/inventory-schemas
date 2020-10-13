@@ -44,16 +44,16 @@ def main(argv):
         query = queries.arr_query(argv[0], argv[2], argv[3])
     
     if argv[1] == 'nested-arr':
-        query = queries.nested_query(argv[0], 'arr', argv[3])
-    if argv == 'nested-str':
-        query = queries.nested_query(argv[0], 'str', argv[3])
+        query = queries.nested_query(argv[0], 'arr', argv[2], argv[3])
+    if argv[1] == 'nested-str':
+        query = queries.nested_query(argv[0], 'str', argv[2], argv[3])
 
     if len(query) > 0:
         now = datetime.now()
-        output_filename = now.strftime("%Y-%m-%d")+"-list-matches-"+argv[0]
+        output_filename = now.strftime("%Y-%m-%d")+"-list-matches-"+"-".join(argv[0].split("/"))
         config_yaml = yaml.dump(builder(output_filename, query), default_flow_style=False, sort_keys=False)
 
-        yaml_file = open('./generated-yamls/test_file.yaml', 'w')
+        yaml_file = open(f'./generated-yamls/{output_filename}.yaml', 'w')
         yaml_file.write('---\n')
         yaml_file.write(config_yaml)
         yaml_file.close()
