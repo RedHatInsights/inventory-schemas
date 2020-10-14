@@ -31,14 +31,11 @@ def main(argv):
     query = ''
 
     if len(argv) != 4:
-        raise Exception(f'Not enough arguments was provided. Provided: {len(argv)}')
+        raise Exception(f'Not enough arguments was provided. Required: 4. Provided: {len(argv)}.')
         return
     
     if argv[1] == 'str':
-        if argv[2] == 'max-length':
-            query = queries.string_max_length(argv[0], int(argv[3]))
-        if argv[2] == 'pattern':
-            query = queries.string_match_regex(argv[0], argv[3])
+        query = queries.string_query(argv[0], argv[2], argv[3])
 
     if argv[1] == 'arr':
         query = queries.arr_query(argv[0], argv[2], argv[3])
