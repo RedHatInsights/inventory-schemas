@@ -165,6 +165,10 @@ $defs:
           type: string
           maxLength: 30
         type: array
+      os_vendor:
+        type: string
+        enum: ["Red Hat", "Cannonical", "Oracle", "CentOS", "Debian"]
+        description: The vendor of the OS/distro
       os_release:
         type: string
         maxLength: 100
