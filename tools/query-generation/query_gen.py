@@ -34,16 +34,17 @@ def main(argv):
         raise Exception(f'Not enough arguments was provided. Required: 4. Provided: {len(argv)}.')
         return
     
-    if argv[1] == 'str':
-        query = queries.string_query(argv[0], argv[2], argv[3])
+    if argv[0] == 'str':
+        query = queries.string_query(argv[1], argv[2], argv[3])
 
-    if argv[1] == 'arr':
-        query = queries.arr_query(argv[0], argv[2], argv[3])
+    # commenting out the follwing until we have PSQL 12 in prod
+    # if argv[0] == 'arr':
+    #     query = queries.arr_query(argv[1], argv[2], argv[3])
     
-    if argv[1] == 'nested-arr':
-        query = queries.nested_query(argv[0], 'arr', argv[2], argv[3])
-    if argv[1] == 'nested-str':
-        query = queries.nested_query(argv[0], 'str', argv[2], argv[3])
+    # if argv[1] == 'nested-arr':
+    #     query = queries.nested_query(argv[0], 'arr', argv[2], argv[3])
+    # if argv[1] == 'nested-str':
+    #     query = queries.nested_query(argv[0], 'str', argv[2], argv[3])
 
     if len(query) > 0:
         now = datetime.now()
