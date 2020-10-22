@@ -18,7 +18,7 @@ the Host Inventory.
 
 1. Once a pull request is opened to update a pre-existing field and all the requested changes are resolved, someone from [RedHatInsights/host-based-inventory-comitters team](https://github.com/orgs/RedHatInsights/teams/host-based-inventory-committers) should open a merge request with [App-SRE](https://gitlab.cee.redhat.com/service/app-interface/-/tree/master/data/services/insights/host-inventory/queries) to query the database for potential impact to the HBI reporters.
    
-2. The HBI team member will analyze the data returned from the App-SRE job, produce a report similar to to the following, and post it in the pull request thread.
+2. The repository maintainers will analyze the data returned from the App-SRE job, produce a report similar to to the following, and post it in the pull request thread.
 
     | Reporters | Result | Count |
     | --- | --- | --- |
@@ -28,11 +28,11 @@ the Host Inventory.
     | puptoo | Fail | 42 |
 
 
-3. If the report seems satisfactory and there are no more concerns, someone from the HBI team will merge the PR.
+3. If the report seems satisfactory and there are no more concerns, a repository maintainer will merge the PR.
 
-4. In the event that the report is unsatisfactory (e.g. it shows a high number of failures from one or multiple reporters), the PR owner must coordinate with the HBI team and the stakeholders from the reporter(s) that show failures. Together, they must decide whether to change the PR or to update the reporter(s).
+4. In the event that the report is unsatisfactory (e.g. it shows a high number of failures from one or multiple reporters), the PR owner must coordinate with the repository maintainers and the stakeholders from the reporter(s) that show failures. Together, they must decide whether to change the PR or to update the reporter(s).
 
-5. If the pull request was opened to add a new field rather than update a pre-existing one, no report like the one above needs to be generated. Someone from the HBI team can merge it if there are no concerns.
+5. If the pull request only adds new fields there is no need to generate a report since the database will not contain values to compare against for the new fields. A repository maintainer will help in getting consensus with the schema [Stakeholders](#stakeholders) before merging the PR.
 
 6. Once the PR is merged, the HBI team member who merged it can open another PR in the HBI repository to reflect those changes.
 
