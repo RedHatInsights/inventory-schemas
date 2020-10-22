@@ -1,3 +1,5 @@
 scratch/
 tools/simple-test/venv
+tools/query-generation/generated-yamls
 node_modules/
+__pycache__/

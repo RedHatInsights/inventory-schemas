@@ -51,7 +51,7 @@ $defs:
         type: boolean
       enabled:
         type: boolean
-      baseurl:
+      base_url:
         type: string
         format: uri
         maxLength: 2048
@@ -251,3 +251,20 @@ $defs:
           example: "H2O"
           maxLength: 3
           pattern: '^[A-Z][A-Z0-9]{2}$'
+      tuned_profile:
+        type: string
+        maxLength: 256
+        description: Current profile resulting from command tuned-adm active
+        example: 'desktop'
+      selinux_current_mode:
+        type: string
+        enum: [enforcing, permissive, disabled]
+        maxLength: 10
+        description: The current SELinux mode, either enforcing, permissive, or disabled
+        example: 'enforcing'
+      selinux_config_file:
+        type: string
+        enum: [enforcing, permissive, disabled]
+        maxLength: 10
+        description: The SELinux mode provided in the config file
+        example: 'permissive'
