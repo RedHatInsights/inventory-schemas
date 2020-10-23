@@ -21,7 +21,7 @@ $defs:
         enum: ["RHEL", "SLES", "SLED"]
       vendor:
         type: string
-        enum: ["Red Hat", "CentOS", "Debian", "Cannonical"]
+        enum: ["Red Hat", "CentOS", "Debian", "Canonical"]
       modification:
         type: string
         enum: ["server", "desktop", "workstation"]
