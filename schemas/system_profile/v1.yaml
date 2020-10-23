@@ -14,8 +14,10 @@ $defs:
     properties:
       major:
         type: integer
+        maxLength: 4
       minor:
         type: integer
+        maxLength: 4
       name:
         type: string
         enum: ["RHEL", "SLES", "SLED"]
