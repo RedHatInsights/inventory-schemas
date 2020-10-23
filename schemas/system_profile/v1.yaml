@@ -167,6 +167,7 @@ $defs:
         type: array
       os_vendor:
         type: string
+        example: "Red Hat"
         enum: ["Red Hat", "Cannonical", "Oracle", "CentOS", "Debian"]
         description: The vendor of the OS/distro
       os_release:
