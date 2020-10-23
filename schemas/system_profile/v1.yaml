@@ -9,6 +9,22 @@ $defs:
       minLength: 1
     additionalProperties:
       "$ref": "#/$defs/NestedObject"
+  OperatingSystem:
+    type: object
+    properties:
+      major:
+        type: integer
+      minor:
+        type: integer
+      name:
+        type: string
+        enum: ["RHEL", "SLES", "SLED"]
+      vendor:
+        type: string
+        enum: ["Red Hat", "CentOS", "Debian", "Cannonical"]
+      modification:
+        type: string
+        enum: ["server", "desktop", "workstation"]
   DiskDevice:
     description: Representation of one mounted device
     type: object
@@ -165,6 +181,14 @@ $defs:
           type: string
           maxLength: 30
         type: array
+      operating_system:
+        $ref: '#/$defs/OperatingSystem'
+      os_release_major:
+        type: int
+        maxLength: 4
+      os_release_minor:
+        type: int
+        maxLength: 4
       os_release:
         type: string
         maxLength: 100
