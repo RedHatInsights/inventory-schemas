@@ -19,14 +19,9 @@ $defs:
         type: integer
         maxLength: 4
       name:
+        description: Name of the distro/os
         type: string
-        enum: ["RHEL", "SLES", "SLED"]
-      vendor:
-        type: string
-        enum: ["Red Hat", "CentOS", "Debian", "Canonical"]
-      modification:
-        type: string
-        enum: ["server", "desktop", "workstation"]
+        enum: ["RHEL"]
   DiskDevice:
     description: Representation of one mounted device
     type: object
