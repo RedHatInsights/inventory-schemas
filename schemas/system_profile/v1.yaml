@@ -13,13 +13,18 @@ $defs:
     type: object
     properties:
       major:
+        description: Major release of OS (aka the x version)
+        example: 6
         type: integer
         maxLength: 4
       minor:
+        description: Minor release of OS (aka the y version)
+        example: 8
         type: integer
         maxLength: 4
       name:
         description: Name of the distro/os
+        example: "RHEL"
         type: string
         enum: ["RHEL"]
   DiskDevice:
