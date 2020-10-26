@@ -10,6 +10,7 @@ $defs:
     additionalProperties:
       "$ref": "#/$defs/NestedObject"
   OperatingSystem:
+    description: Object for OS details
     type: object
     properties:
       major:
@@ -24,8 +25,9 @@ $defs:
         maxLength: 4
       name:
         description: Name of the distro/os
-        example: "RHEL"
+        example: RHEL
         type: string
+        maxLength: 4
         enum: ["RHEL"]
   DiskDevice:
     description: Representation of one mounted device
