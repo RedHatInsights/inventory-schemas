@@ -27,7 +27,6 @@ $defs:
         description: Name of the distro/os
         example: RHEL
         type: string
-        maxLength: 4
         enum: ["RHEL"]
   DiskDevice:
     description: Representation of one mounted device
