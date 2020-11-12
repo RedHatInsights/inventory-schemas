@@ -163,7 +163,7 @@ $defs:
       cpu_flags:
         items:
           type: string
-          maxLength: 30
+          maxLength: 300
         type: array
       os_release:
         type: string
