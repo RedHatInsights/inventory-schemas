@@ -9,28 +9,6 @@ $defs:
       minLength: 1
     additionalProperties:
       "$ref": "#/$defs/NestedObject"
-  OperatingSystem:
-    description: Object for OS details
-    type: object
-    properties:
-      major:
-        description: Major release of OS (aka the x version)
-        example: 6
-        type: integer
-        minimum: 0
-        maximum: 99
-      minor:
-        description: Minor release of OS (aka the y version)
-        example: 8
-        type: integer
-        minimum: 0
-        maximum: 99
-      name:
-        description: Name of the distro/os
-        example: RHEL
-        type: string
-        maxLength: 4
-        enum: ["RHEL"]
   DiskDevice:
     description: Representation of one mounted device
     type: object
@@ -194,7 +172,27 @@ $defs:
           maxLength: 30
         type: array
       operating_system:
-        $ref: '#/$defs/OperatingSystem'
+        description: Object for OS details
+        type: object
+        properties:
+          major:
+            description: Major release of OS (aka the x version)
+            example: 6
+            type: integer
+            minimum: 0
+            maximum: 99
+          minor:
+            description: Minor release of OS (aka the y version)
+            example: 8
+            type: integer
+            minimum: 0
+            maximum: 99
+          name:
+            description: Name of the distro/os
+            example: "RHEL"
+            type: string
+            maxLength: 4
+            enum: [RHEL]
       os_release:
         type: string
         maxLength: 100
