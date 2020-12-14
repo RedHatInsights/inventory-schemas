@@ -7,7 +7,10 @@ $defs:
     propertyNames:
       minLength: 1
     additionalProperties:
-      "$ref": "#/$defs/NestedObject"
+      oneOf:
+        - "$ref": "#/$defs/NestedObject"
+        - not:
+            type: object
   DiskDevice:
     description: Representation of one mounted device
     type: object
@@ -25,7 +28,6 @@ $defs:
         example:
           uid: "0"
           ro: true
-        type: object
         "$ref": "#/$defs/NestedObject"
       mount_point:
         description: The mount point
