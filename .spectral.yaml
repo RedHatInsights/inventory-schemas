@@ -100,6 +100,7 @@ except:
   'schemas/system_profile/v1.yaml#/$defs/SystemProfile/properties/insights_egg_version': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/SystemProfile/properties/captured_date': ['property-example', 'property-description']
   'schemas/system_profile/v1.yaml#/$defs/NestedObject': ['property-arbitrary-object-without-keys']
+  'schemas/system_profile/v1.yaml#/$defs/NestedObject/additionalProperties/oneOf/1/not': ['property-arbitrary-object-without-keys']
   'schemas/system_profile/v1.yaml#/$defs/DiskDevice/properties/options': ['property-arbitrary-object-without-keys']
   'schemas/system_profile/v1.yaml#/$defs/NetworkInterface/properties/ipv4_addresses/items': ['property-string-max-length']
   'schemas/system_profile/v1.yaml#/$defs/NetworkInterface/properties/ipv6_addresses/items': ['property-string-max-length']
