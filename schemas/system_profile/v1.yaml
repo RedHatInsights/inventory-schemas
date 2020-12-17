@@ -5,7 +5,9 @@ $defs:
   NestedObject:
     type: object
     description: An arbitrary object that doesn’t allow empty string keys.
-    propertyNames:
+    # openapi spec does not support propertyNames, we will use a custom validator
+    # to validate x-propertyNames as propertyNames
+    x-propertyNames:
       minLength: 1
     additionalProperties:
       oneOf:
