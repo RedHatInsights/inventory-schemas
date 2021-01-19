@@ -1,6 +1,6 @@
 ---
 $id: system_profile.spec.yaml
-$schema: http://json-schema.org/draft-07/schema#
+$schema: http://json-schema.org/draft-04/schema#
 $defs:
   NestedObject:
     type: object
@@ -261,6 +261,13 @@ $defs:
         maxLength: 32
       installed_packages:
         type: array  # technically a set, ordering is not important
+        items:
+          description: A NEVRA string for a single installed package
+          example: "krb5-libs-0:-1.16.1-23.fc29.i686"
+          type: string
+          maxLength: 512
+      installed_packages_delta:
+        type: array  # sorted list, rest of packages not in installed_packages
         items:
           description: A NEVRA string for a single installed package
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
