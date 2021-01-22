@@ -1,0 +1,19 @@
+---
+openapi: 3.0.0
+info:
+  title: Test Schema
+  version: 1.0.0
+paths:
+  /endpoint:
+    post: 
+      responses:
+        '200':
+          description: Test System Profile Schema
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/SystemProfile'
+components:
+  schemas:
+    SystemProfile:
+      $ref: '../../schemas/system_profile/v1.yaml#/$defs/SystemProfile'
