@@ -236,6 +236,7 @@ $defs:
       satellite_managed:
         type: boolean
       satellite_id:
+        description: The satellite ID of a given system represented by UUID
         type: string
         pattern:  '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
         example: "5957b010-b6c4-4019-a84c-f7e304ebbb42"
