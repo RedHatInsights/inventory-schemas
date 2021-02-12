@@ -49,6 +49,7 @@ INVALID_SYSTEM_PROFILES = (
     {"selinux_current_mode": "random"},
     {"selinux_config_file": "random"},
     {"owner_id": "x"*12},
+    {"cpu_model": "x"*101},
     {"number_of_cpus": "35465"},
     {"number_of_sockets": "35465"},
     {"cores_per_socket": "35465"},
