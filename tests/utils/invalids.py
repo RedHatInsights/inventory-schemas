@@ -49,6 +49,8 @@ INVALID_SYSTEM_PROFILES = (
     {"selinux_current_mode": "random"},
     {"selinux_config_file": "random"},
     {"owner_id": "x"*12},
+    {"client_id": "x"*12},
+    {"client_id": "plxi13y1-99ut-3rdf-bc10-84opf904lfad"},
     {"cpu_model": "x"*101},
     {"number_of_cpus": "35465"},
     {"number_of_sockets": "35465"},
