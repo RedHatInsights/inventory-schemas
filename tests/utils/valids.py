@@ -47,6 +47,8 @@ VALID_SYSTEM_PROFILES = (
     {"selinux_current_mode": "enforcing"},
     {"selinux_config_file": "permissive"},
     {"owner_id": "22cd8e39-13bb-4d02-8316-84b850dc5136"},
+    {"rhc_client_id": "22cd8e39-13bb-4d02-8316-84b850dc5136"},
+    {"cpu_model": "Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz"},
     {"number_of_cpus": 35465},
     {"number_of_sockets": 35465},
     {"cores_per_socket": 35465},
