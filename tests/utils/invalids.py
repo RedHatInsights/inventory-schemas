@@ -68,4 +68,5 @@ INVALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"gpgcheck": "True"}]},
     {"yum_repos": [{"enabled": "False"}]},
     {"installed_packages_delta": ["x" * 513]},
+    {"smart_management_enabled": "True"},
 )
