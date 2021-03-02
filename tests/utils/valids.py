@@ -62,6 +62,7 @@ VALID_SYSTEM_PROFILES = (
     {"operating_system": {"name": 'RHEL'}},
     {"katello_agent_running": False},
     {"satellite_managed": True},
+    {"is_marketplace": True},
     {"yum_repos": [{"gpgcheck": True}]},
     {"yum_repos": [{"enabled": False}]},
     {"installed_packages_delta": ["x" * 512]},
