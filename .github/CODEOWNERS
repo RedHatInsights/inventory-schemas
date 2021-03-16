@@ -2,4 +2,4 @@
 * @RedHatInsights/host-based-inventory-committers
 
 # Stakeholders and HBI devs
-schemas/system_profile/* @stevehnh @jeromemarc @kahowell @beav @RedHatInsights/host-based-inventory-committers
+/schemas/system_profile/* @stevehnh @jeromemarc @kahowell @beav @codeheeler @RedHatInsights/host-based-inventory-committers
