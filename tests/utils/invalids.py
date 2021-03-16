@@ -47,7 +47,7 @@ INVALID_SYSTEM_PROFILES = (
     {"sap_version": "1.00.122.04.147857563665464"},
     {"tuned_profile": "x"*257},
     {"selinux_current_mode": "random"},
-    {"selinux_config_file": "random"},
+    {"selinux_config_file": "x"*129},
     {"owner_id": "x"*12},
     {"rhc_client_id": "x"*12},
     {"rhc_client_id": "plxi13y1-99ut-3rdf-bc10-84opf904lfad"},
