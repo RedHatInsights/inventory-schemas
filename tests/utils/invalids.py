@@ -51,6 +51,7 @@ INVALID_SYSTEM_PROFILES = (
     {"owner_id": "x"*12},
     {"rhc_client_id": "x"*12},
     {"rhc_client_id": "plxi13y1-99ut-3rdf-bc10-84opf904lfad"},
+    {"rhc_config_state": "x"*12},
     {"cpu_model": "x"*101},
     {"number_of_cpus": "35465"},
     {"number_of_sockets": "35465"},
