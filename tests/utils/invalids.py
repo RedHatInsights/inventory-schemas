@@ -69,5 +69,5 @@ INVALID_SYSTEM_PROFILES = (
     {"is_marketplace": "True"},
     {"yum_repos": [{"gpgcheck": "True"}]},
     {"yum_repos": [{"enabled": "False"}]},
-    {"installed_packages_delta": ["x" * 513]},
+    {"installed_packages_multiple": ["x" * 513]},
 )
