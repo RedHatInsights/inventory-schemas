@@ -35,6 +35,7 @@ VALID_SYSTEM_PROFILES = (
     {"insights_egg_version": "x" * 50},
     {"captured_date": "x" * 32},
     {"installed_packages": ["x" * 512]},
+    {"gpg_pubkeys": ["x" * 512]},
     {"installed_services": ["x" * 512]},
     {"enabled_services": ["x" * 512]},
     {"sap_sids": ["H2O"]},
