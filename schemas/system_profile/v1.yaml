@@ -145,6 +145,12 @@ $defs:
         pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
         maxLength: 36
         example: 22cd8e39-13bb-4d02-8316-84b850dc5136
+      rhc_config_state:
+        description: A UUID associated with the config manager state
+        type: string
+        pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+        maxLength: 36
+        example: 22cd8e39-13bb-4d02-8316-84b850dc5136
       cpu_model:
         description: The cpu model name
         type: string
@@ -277,17 +283,24 @@ $defs:
         type: string
         maxLength: 32
       installed_packages:
-        type: array  # technically a set, ordering is not important
+        type: array  # technically a set, ordered by RPM sorting algorithm
         items:
           description: A NEVRA string for a single installed package
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
           type: string
           maxLength: 512
       installed_packages_delta:
-        type: array  # sorted list, rest of packages not in installed_packages
+        type: array  # packages not in installed_packages, ordered by RPM sorting algorithm
         items:
           description: A NEVRA string for a single installed package
           example: "krb5-libs-0:-1.16.1-23.fc29.i686"
+          type: string
+          maxLength: 512
+      gpg_pubkeys:
+        type: array  # technically a set, ordered by RPM sorting algorithm
+        items:
+          description: A package name string of a single imported GPG pubkey
+          example: "gpg-pubkey-11111111-22222222"
           type: string
           maxLength: 512
       installed_services:
@@ -337,10 +350,12 @@ $defs:
         example: 'enforcing'
       selinux_config_file:
         type: string
-        enum: [enforcing, permissive, disabled]
-        maxLength: 10
+        maxLength: 128
         description: The SELinux mode provided in the config file
         example: 'permissive'
+      is_marketplace:
+        description: Indicates whether the host is part of a marketplace install from AWS, Azure, etc.
+        type: boolean
       rhsm:
         description: Object for subscription-manager details
         type: object
