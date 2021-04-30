@@ -68,5 +68,5 @@ VALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"gpgcheck": True}]},
     {"yum_repos": [{"enabled": False}]},
     {"installed_packages_delta": ["x" * 512]},
-    {"is_edge": True},
+    {"host_type": "edge"},
 )
