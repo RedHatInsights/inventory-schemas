@@ -1,4 +1,5 @@
 scratch/
+tools/simple-test/venv
 node_modules/
 __pycache__/
 venv/
