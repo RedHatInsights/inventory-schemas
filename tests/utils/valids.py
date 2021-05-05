@@ -69,4 +69,6 @@ VALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"enabled": False}]},
     {"installed_packages_delta": ["x" * 512]},
     {"host_type": "edge"},
+    {"greenboot_status": "red"},
+    {"greenboot_status": "green"},
 )
