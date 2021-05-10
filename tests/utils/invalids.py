@@ -72,4 +72,6 @@ INVALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"enabled": "False"}]},
     {"installed_packages_delta": ["x" * 513]},
     {"host_type": "nope"},
+    {"greenboot_status": "blue"},
+    {"greenboot_status": "too long"},
 )
