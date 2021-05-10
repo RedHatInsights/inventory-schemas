@@ -189,10 +189,10 @@ $defs:
         type: string
         maxLength: 50
       cpu_flags:
+        type: array
         items:
           type: string
           maxLength: 30
-        type: array
       operating_system:
         description: Object for OS details
         type: object
