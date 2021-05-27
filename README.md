@@ -13,6 +13,21 @@ the actual System Profile shape.
 Document version is reflected in the filename (_v1.yaml_) and under _$version_ root key. _$id_ is a file name used in
 the Host Inventory.
 
+## Contributing ##
+
+### System Profile ###
+When contributing a new field to the system_profile schema please insure you complete the following steps:
+
+1. Add the new field
+2. Annotate the field
+    - Add an example of the value(s) you expect to receive using the `example` keyword
+    - Add a description of the field. If the field should support `range` or `wildcard` operations when queried against, note that here. The word must be present for the inventory to filter it correctly
+3. Validate the field
+    - The field should have the strictest possible validation rules applied to it.
+4. Add positive and negative test examples
+    - Add examples of valid/invalid values in `tests/utils/valids` and `tests/utils/invalids` respectively.
+5. Mirror the changes in HBI
+    - Open another PR against `insights-host-inventory` and reflect the schema changes there
 
 ## Process For Merging Schema Changes ##
 
