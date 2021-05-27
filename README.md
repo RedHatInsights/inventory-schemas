@@ -16,6 +16,7 @@ the Host Inventory.
 ## Contributing ##
 
 ### System Profile ###
+
 When contributing a new field to the system_profile schema please insure you complete the following steps:
 
 1. Add the new field
@@ -32,7 +33,7 @@ When contributing a new field to the system_profile schema please insure you com
 ## Process For Merging Schema Changes ##
 
 1. Once a pull request is opened to update a pre-existing field and all the requested changes are resolved, someone from [RedHatInsights/host-based-inventory-comitters team](https://github.com/orgs/RedHatInsights/teams/host-based-inventory-committers) should open a merge request with [App-SRE](https://gitlab.cee.redhat.com/service/app-interface/-/tree/master/data/services/insights/host-inventory/queries) to query the database for potential impact to the HBI reporters.
-   
+
 2. The repository maintainers will analyze the data returned from the App-SRE job, produce a report similar to to the following, and post it in the pull request thread.
 
     | Reporters | Result | Count |
@@ -41,7 +42,6 @@ When contributing a new field to the system_profile schema please insure you com
     | ingress | Fail | 2 |
     | puptoo | Pass | 37 |
     | puptoo | Fail | 42 |
-
 
 3. If the report seems satisfactory and there are no more concerns, a repository maintainer will merge the PR.
 
@@ -53,11 +53,10 @@ When contributing a new field to the system_profile schema please insure you com
 
 ### Stakeholders ###
 
-* RHSM - [Kevin Howell](https://github.com/kahowell)
-* Yupana - [Chris Duryee](https://github.com/beav)
-* Puptoo - [Stephen Adams](https://github.com/stevehnh)
-* BU - [Jerome Marc](https://github.com/jeromemarc)
-
+- RHSM - [Kevin Howell](https://github.com/kahowell)
+- Yupana - [Chris Duryee](https://github.com/beav)
+- Puptoo - [Stephen Adams](https://github.com/stevehnh)
+- BU - [Jerome Marc](https://github.com/jeromemarc)
 
 [Host Inventory]: https://github.com/RedHatInsights/insights-host-inventory/
 [System Profile]: schemas/system_profile/
