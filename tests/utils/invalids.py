@@ -74,4 +74,5 @@ INVALID_SYSTEM_PROFILES = (
     {"host_type": "nope"},
     {"greenboot_status": "blue"},
     {"greenboot_status": "too long"},
+    {"greenboot_fallback_detected": "x"},
 )
