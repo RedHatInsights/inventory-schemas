@@ -56,6 +56,8 @@ INVALID_SYSTEM_PROFILES = (
     {"cpu_model": "x"*101},
     {"number_of_cpus": "35465"},
     {"number_of_cpus": 4294967296},
+    {"number_of_sockets": 4294967296},
+    {"cores_per_socket": 4294967296},
     {"number_of_sockets": "35465"},
     {"cores_per_socket": "35465"},
     {"system_memory_bytes": "35465"},
