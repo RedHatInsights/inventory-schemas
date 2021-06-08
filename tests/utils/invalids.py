@@ -46,6 +46,7 @@ INVALID_SYSTEM_PROFILES = (
     {"sap_system": "x"},
     {"sap_instance_number": "300"},
     {"sap_version": "1.00.122.04.147857563665464"},
+    {"sap_version": "1-00v122=04a1478575636"},
     {"tuned_profile": "x"*257},
     {"selinux_current_mode": "random"},
     {"selinux_config_file": "x"*129},
