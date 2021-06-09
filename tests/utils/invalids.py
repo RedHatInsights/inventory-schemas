@@ -2,6 +2,7 @@ INVALID_SYSTEM_PROFILES = (
     {"infrastructure_type": "x" * 101},
     {"infrastructure_vendor": "x" * 101},
     {"network_interfaces": [{"mac_address": "x" * 60}]},
+    {"network_interfaces": [{"mac_address": "some-string" * 60}]},
     {"network_interfaces": [{"name": "x" * 51}]},
     {"network_interfaces": [{"state": "x" * 26}]},
     {"network_interfaces": [{"type": "x" * 19}]},
