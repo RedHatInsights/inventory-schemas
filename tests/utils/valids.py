@@ -71,4 +71,6 @@ VALID_SYSTEM_PROFILES = (
     {"host_type": "edge"},
     {"greenboot_status": "red"},
     {"greenboot_status": "green"},
+    {"greenboot_fallback_detected": True},
+    {"greenboot_fallback_detected": False},
 )
