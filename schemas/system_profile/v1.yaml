@@ -134,6 +134,7 @@ $defs:
   SystemProfile:
     description: Representation of the system profile fields
     type: object
+    title: SystemProfile
     properties:
       owner_id:
         description: A UUID associated with the host's RHSM certificate
