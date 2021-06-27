@@ -1,4 +1,3 @@
-# from openapi_spec_validator import validate_spec
 from jsonschema import Draft4Validator, Draft7Validator, RefResolver
 from jsonschema.validators import extend
 from jsonschema.exceptions import ValidationError
