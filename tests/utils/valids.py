@@ -82,4 +82,21 @@ VALID_SYSTEM_PROFILES = (
     {"greenboot_status": "green"},
     {"greenboot_fallback_detected": True},
     {"greenboot_fallback_detected": False},
+    {"rpm_ostree_deployments": [{  # fully populated
+            "id": "fedora-silverblue-63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb.0",
+            "checksum": "63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb",
+            "origin": "fedora/33/x86_64/silverblue",
+            "osname": "fedora-silverblue",
+            "version": "33.21",
+            "booted": True,
+            "pinned": False,
+        }]},
+    {"rpm_ostree_deployments": [{  # version missing
+            "id": "fedora-silverblue-63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb.0",
+            "checksum": "63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb",
+            "origin": "fedora/33/x86_64/silverblue",
+            "osname": "fedora-silverblue",
+            "booted": True,
+            "pinned": False,
+        }]},
 )

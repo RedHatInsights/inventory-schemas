@@ -1,4 +1,3 @@
-from openapi_spec_validator import validate_spec
 from jsonschema import Draft4Validator, Draft7Validator, RefResolver
 from jsonschema.validators import extend
 from jsonschema.exceptions import ValidationError
@@ -13,6 +12,7 @@ CustomDraft4Validator = extend(
     Draft4Validator, {"x-propertyNames": Draft7Validator.VALIDATORS.get("propertyNames")}
 )
 
+
 class SystemProfileTests(TestCase):
     def setUp(self):
         super().setUp()
@@ -26,7 +26,7 @@ class SystemProfileTests(TestCase):
             with self.subTest(system_profile=system_profile):
                 with pytest.raises(ValidationError):
                     CustomDraft4Validator(self.specification["$defs"]["SystemProfile"], resolver=self.resolver).validate(system_profile)
-    
+
     def test_system_profile_valids(self):
         for system_profile in VALID_SYSTEM_PROFILES:
             with self.subTest(system_profile=system_profile):
