@@ -176,7 +176,7 @@ $defs:
         example: False
         type: boolean
   SystemProfile:
-    title: system_profile
+    title: SystemProfile
     description: Representation of the system profile fields
     type: object
     properties:
