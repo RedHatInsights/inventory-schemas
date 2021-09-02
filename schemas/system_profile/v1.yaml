@@ -440,3 +440,18 @@ $defs:
             example: "8.1"
             type: string
             maxLength: 255
+      system_purpose_usage:
+        description: TODO
+        type: string
+        maxLength: 64
+        example: TODO
+      system_purpose_role:
+        description: TODO
+        type: string
+        maxLength: 64
+        example: TODO
+      system_purpose_sla:
+        description: TODO
+        type: string
+        maxLength: 64
+        example: Premium
