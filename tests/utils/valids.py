@@ -99,4 +99,13 @@ VALID_SYSTEM_PROFILES = (
             "booted": True,
             "pinned": False,
         }]},
+    {"system_purpose_usage": "Production"},
+    {"system_purpose_usage": "Development/Test"},
+    {"system_purpose_usage": "Disaster Recovery"},
+    {"system_purpose_role": "Red Hat Enterprise Linux Server"},
+    {"system_purpose_role": "Red Hat Enterprise Linux Workstation"},
+    {"system_purpose_role": "Red Hat Enterprise Linux Compute Node"},
+    {"system_purpose_sla": "Premium"},
+    {"system_purpose_sla": "Standard"},
+    {"system_purpose_sla": "Self-Support"},
 )
