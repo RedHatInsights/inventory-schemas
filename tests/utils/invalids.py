@@ -238,7 +238,9 @@ INVALID_SYSTEM_PROFILES = (
             "booted": True,
             "pinned": "x",
         }]},
-    {"system_purpose_usage": "foo"},
-    {"system_purpose_role": "bar"},
-    {"system_purpose_sla": "baz"},
+    {"system_purpose": {
+        "usage": "foo",
+        "role": "bar",
+        "sla": "baz",
+    }},
 )
