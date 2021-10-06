@@ -114,4 +114,10 @@ VALID_SYSTEM_PROFILES = (
         "role": "Red Hat Enterprise Linux Compute Node",
         "sla": "Self-Support"
     }},
+    {"ansible": {
+        "controller_system": True,
+        "hub_system": False,
+        "catalog_worker_system": True,
+        "sso_system": False
+    }},
 )

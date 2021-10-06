@@ -462,3 +462,23 @@ $defs:
             maxLength: 12
             enum: ['Premium', 'Standard', 'Self-Support']
             example: 'Premium'
+      ansible:
+        description: Object containing data specific to Ansible Automation Platform
+        type: object
+        properties:
+          controller_system:
+            description: The ansible-tower or automation-controller RPM is present on the host
+            type: boolean
+            example: True
+          hub_system:
+            description: The automation-hub RPM is present on the host
+            type: boolean
+            example: False
+          catalog_worker_system:
+            description: The catalog-worker RPM is present on the host
+            type: boolean
+            example: True
+          sso_system:
+            description: Host is an ansible-sso system
+            type: boolean
+            example: False

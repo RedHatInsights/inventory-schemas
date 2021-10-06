@@ -243,4 +243,10 @@ INVALID_SYSTEM_PROFILES = (
         "role": "bar",
         "sla": "baz",
     }},
+    {"ansible": {
+        "controller_system": "strings are invalid",
+        "hub_system": 17,
+        "catalog_worker_system": "still invalid",
+        "sso_system": 1
+    }},
 )
