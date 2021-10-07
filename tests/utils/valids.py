@@ -115,9 +115,9 @@ VALID_SYSTEM_PROFILES = (
         "sla": "Self-Support"
     }},
     {"ansible": {
-        "controller_system": True,
-        "hub_system": False,
-        "catalog_worker_system": True,
-        "sso_system": False
+        "controller_version": "1.0",
+        "hub_version": "3.4.1",
+        "catalog_worker_version": "100.387.9846.12",
+        "sso_version": "1.28.3.52641.10000513168495123"
     }},
 )
