@@ -466,40 +466,24 @@ $defs:
         description: Object containing data specific to Ansible Automation Platform
         type: object
         properties:
-          catalog_worker_system:
-            description: The catalog-worker RPM is present on the host
-            type: boolean
-            example: True
-          catalog_worker_version:
-            description: The catalog-worker version on the host
-            type: string
-            example:  '7.8.9'
-            maxLength: 30
-            pattern: '^\d+(\.\d+)+$'
-          controller_system:
-            description: The ansible-tower or automation-controller RPM is present on the host
-            type: boolean
-            example: True
           controller_version:
             description: The ansible-tower or automation-controller version on the host
             type: string
             example:  '1.2.3'
             maxLength: 30
             pattern: '^\d+(\.\d+)+$'
-          hub_system:
-            description: The automation-hub RPM is present on the host
-            type: boolean
-            example: False
           hub_version:
             description: The automation-hub version on the host
             type: string
             example:  '4.5.6'
             maxLength: 30
             pattern: '^\d+(\.\d+)+$'
-          sso_system:
-            description: Host is an ansible-sso system
-            type: boolean
-            example: False
+          catalog_worker_version:
+            description: The catalog-worker version on the host
+            type: string
+            example:  '7.8.9'
+            maxLength: 30
+            pattern: '^\d+(\.\d+)+$'
           sso_version:
             description: The SSO version on the host
             type: string

@@ -243,12 +243,6 @@ INVALID_SYSTEM_PROFILES = (
         "role": "bar",
         "sla": "baz",
     }},
-    {"ansible": { # wrong data type for "system" fields
-        "controller_system": "strings are invalid",
-        "hub_system": 17,
-        "catalog_worker_system": "still invalid",
-        "sso_system": 1
-    }},
     {"ansible": { # wrong data type for controller_version
         "controller_version": 1.0,
         "hub_version": "3.4.1",
@@ -260,5 +254,11 @@ INVALID_SYSTEM_PROFILES = (
         "hub_version": "3.4.1",
         "catalog_worker_version": "100.387.9846.12",
         "sso_version": "1.4"*11,
+    }},
+    {"ansible": { # don't send "existence" booleans in place of versions
+        "controller_version": True,
+        "hub_version": False,
+        "catalog_worker_version": False,
+        "sso_version": False,
     }},
 )
