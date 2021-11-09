@@ -261,4 +261,7 @@ INVALID_SYSTEM_PROFILES = (
         "catalog_worker_version": False,
         "sso_version": False,
     }},
+    {"mssql": { # Must be a string, not a number
+        "version": 15.3,
+    }},
 )
