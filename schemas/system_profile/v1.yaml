@@ -502,4 +502,5 @@ $defs:
             description: MSSQL version number 
             type: string
             example: '15.2.0'
+            maxLength: 30
             x-wildcard: true

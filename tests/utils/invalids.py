@@ -264,4 +264,7 @@ INVALID_SYSTEM_PROFILES = (
     {"mssql": { # Must be a string, not a number
         "version": 15.3,
     }},
+    {"mssql": { # Too long
+        "version": "x" * 35,
+    }}
 )
