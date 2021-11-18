@@ -65,7 +65,7 @@ INVALID_SYSTEM_PROFILES = (
     {"system_memory_bytes": "35465"},
     {"system_memory_bytes": 18446744073709551617},
     {"network_interfaces": [{"mtu": 18446744073709551617}]},
-    {"network_interfaces": [{"ipv4_addresses": "123.456.789.012"}]},
+    {"network_interfaces": [{"ipv4_addresses": "192.0.2.146"}]},
     {"network_interfaces": [{"ipv6_addresses": "0123:4567:89ab:cdef:0123:4567:89ab:cdef"}]},
     {"network_interfaces": [{"mtu": "15"}]},
     {"rhsm": {"version": "x" * 300}},
