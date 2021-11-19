@@ -69,9 +69,10 @@ INVALID_SYSTEM_PROFILES = (
     {"network_interfaces": [{"ipv6_addresses": "0123:4567:89ab:cdef:0123:4567:89ab:cdef"}]},
     {"network_interfaces": [{"mtu": "15"}]},
     {"rhsm": {"version": "x" * 300}},
-    {"operating_system": {"major": "10"}},
-    {"operating_system": {"minor": "5"}},
-    {"operating_system": {"name": 'ABCD'}},
+    {"operating_system": {"minor": 5}}, # Must also specify name field
+    {"operating_system": {"major": 10}}, # Must also specify name field
+    {"operating_system": {"name": "ABCD"}}, # Invalid name
+    {"operating_system": {"name": "RHEL", "major": "10", "minor": "5"}}, # Invalid types
     {"katello_agent_running": "False"},
     {"satellite_managed": "True"},
     {"is_marketplace": "True"},

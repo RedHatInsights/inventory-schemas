@@ -252,6 +252,7 @@ $defs:
       operating_system:
         description: Object for OS details. Supports range operations
         type: object
+        required: ["name"]
         properties:
           major:
             description: Major release of OS (aka the x version)
