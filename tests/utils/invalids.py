@@ -268,5 +268,11 @@ INVALID_SYSTEM_PROFILES = (
     }},
     {"mssql": { # Too long
         "version": "x" * 35,
+    }},
+    {"package_updates": { # must be a string
+        "releasever": 8
+    }},
+    {"package_updates": { # exceeds maxlen
+        "basearch": "a" * 20
     }}
 )

@@ -508,3 +508,62 @@ $defs:
             example: '15.2.0'
             maxLength: 30
             x-wildcard: true
+      package_updates:
+        description: Object containing data about updatable packages
+        type: object
+        x-indexed: false
+        properties:
+          releasever:
+            description: OS release version reported by yum/dnf
+            type: string
+            example: '8.5'
+            maxLength: 16
+          basearch:
+            description: OS architecture reported by yum/dnf
+            type: string
+            example: 'x86_64'
+            maxLength: 16
+          metadata_time:
+            description: Timestamp of the last yum/dnf metadata update
+            type: string
+            format: date-time
+            example: '2021-01-01T09:39:45Z'
+            maxLength: 50
+          update_list:
+            description: Set holding updates for an installed package
+            type: object
+            additionalProperties: # key is a name-version-release.arch of the package
+                description: Updates for given name-version-release.arch
+                type: object
+                properties:
+                  available_updates:
+                    type: array # list of updates for a given package
+                    items:
+                      description: Package update object
+                      type: object
+                      properties:
+                        package:
+                          description: Name-version-release.arch of an update
+                          type: string
+                          example: 'NetworkManager-1:1.22.8-5.el8_2.x86_64'
+                          maxLength: 512
+                        repository:
+                          description: Label of the repository associated with the update
+                          type: string
+                          example: 'rhel-8-for-x86_64-baseos-rpms'
+                          maxLength: 512
+                        basearch:
+                          description: Architecture of the repository associated with the update
+                          type: string
+                          example: 'x86_64'
+                          maxLength: 16
+                        releasever:
+                          description: Release version of the repository associated with the update
+                          type: string
+                          example: '8.5'
+                          maxLength: 16
+                        erratum:
+                          description: Erratum associated with the update
+                          type: string
+                          example: 'RHSA-2020:3011'
+                          maxLength: 32

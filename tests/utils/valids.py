@@ -121,5 +121,41 @@ VALID_SYSTEM_PROFILES = (
     }},
     {"mssql": {
         "version": "15.3",
+    }},
+    {"package_updates": {
+        "releasever": "8",
+        "basearch": "x86_64",
+        "update_list": {
+          "NetworkManager-1:1.22.8-4.el8.x86_64": {
+            "available_updates": [
+              {
+                "package": "NetworkManager-1:1.22.8-5.el8_2.x86_64",
+                "repository": "rhel-8-for-x86_64-baseos-rpms",
+                "basearch": "x86_64",
+                "releasever": "8",
+                "erratum": "RHSA-2020:3011"
+              }
+            ]
+          },
+          "perl-DBD-Pg-3.7.4-3.module+el8.1.0+2936+a6c86a5d.x86_64": {
+            "available_updates": [
+                {
+                    "package": "perl-DBD-Pg-3.7.4-4.module+el8.1.1+4707+d3bacf56.x86_64",
+                    "erratum": "RHBA-2020:0347",
+                    "repository": "rhel-8-for-x86_64-appstream-rpms",
+                    "basearch": "x86_64",
+                    "releasever": "8"
+                },
+                {
+                    "package": "perl-DBD-Pg-3.7.4-4.module+el8.3.0+6565+7d8e397c.x86_64",
+                    "erratum": "RHEA-2020:4727",
+                    "repository": "rhel-8-for-x86_64-appstream-rpms",
+                    "basearch": "x86_64",
+                    "releasever": "8"
+                }
+            ]
+          }
+        },
+        "metadata_time": "2021-01-01T09:39:45Z"
     }}
 )
