@@ -175,6 +175,55 @@ $defs:
         description: Whether the deployment is currently pinned
         example: False
         type: boolean
+  Basearch:
+    description: Representation of system's base architecture
+    type: string
+    example: 'x86_64'
+    maxLength: 16
+  Releasever:
+    description: Representation of system's OS release version
+    type: string
+    example: '8.5'
+    maxLength: 16
+  UpdateList:
+    description: Map holding updates for an installed package
+    type: object
+    properties:
+      clientside:
+        description: Mark evaluation as done on client
+        example: True
+        type: boolean
+    additionalProperties: # key is a name-version-release.arch of the package
+      description: Updates for given name-version-release.arch
+      type: object
+      properties:
+        available_updates:
+          type: array # list of updates for a given package
+          items:
+            description: Package update object
+            type: object
+            properties:
+              package:
+                description: Name-version-release.arch of an update
+                type: string
+                example: 'NetworkManager-1:1.22.8-5.el8_2.x86_64'
+                maxLength: 512
+              repository:
+                description: Label of the repository associated with the update
+                type: string
+                example: 'rhel-8-for-x86_64-baseos-rpms'
+                maxLength: 512
+              basearch:
+                description: Architecture of the repository associated with the update
+                "$ref": "#/$defs/Basearch"
+              releasever:
+                description: Release version of the repository associated with the update
+                "$ref": "#/$defs/Releasever"
+              erratum:
+                description: Erratum associated with the update
+                type: string
+                example: 'RHSA-2020:3011'
+                maxLength: 32
   SystemProfile:
     title: SystemProfile
     description: Representation of the system profile fields
@@ -515,14 +564,10 @@ $defs:
         properties:
           releasever:
             description: OS release version reported by yum/dnf
-            type: string
-            example: '8.5'
-            maxLength: 16
+            "$ref": "#/$defs/Releasever"
           basearch:
             description: OS architecture reported by yum/dnf
-            type: string
-            example: 'x86_64'
-            maxLength: 16
+            "$ref": "#/$defs/Basearch"
           metadata_time:
             description: Timestamp of the last yum/dnf metadata update
             type: string
@@ -530,40 +575,5 @@ $defs:
             example: '2021-01-01T09:39:45Z'
             maxLength: 50
           update_list:
-            description: Set holding updates for an installed package
-            type: object
-            additionalProperties: # key is a name-version-release.arch of the package
-                description: Updates for given name-version-release.arch
-                type: object
-                properties:
-                  available_updates:
-                    type: array # list of updates for a given package
-                    items:
-                      description: Package update object
-                      type: object
-                      properties:
-                        package:
-                          description: Name-version-release.arch of an update
-                          type: string
-                          example: 'NetworkManager-1:1.22.8-5.el8_2.x86_64'
-                          maxLength: 512
-                        repository:
-                          description: Label of the repository associated with the update
-                          type: string
-                          example: 'rhel-8-for-x86_64-baseos-rpms'
-                          maxLength: 512
-                        basearch:
-                          description: Architecture of the repository associated with the update
-                          type: string
-                          example: 'x86_64'
-                          maxLength: 16
-                        releasever:
-                          description: Release version of the repository associated with the update
-                          type: string
-                          example: '8.5'
-                          maxLength: 16
-                        erratum:
-                          description: Erratum associated with the update
-                          type: string
-                          example: 'RHSA-2020:3011'
-                          maxLength: 32
+            description: Map holding updates for an installed package
+            "$ref": "#/$defs/UpdateList"
