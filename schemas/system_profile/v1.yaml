@@ -122,7 +122,7 @@ $defs:
         description: MAC address (with or without colons)
         example: "00:00:00:00:00:00, 10:00:00:00:00:00, 20:00:00:00:00:00"
         type: string
-        pattern: "^([A-Fa-f0-9]{2}[:-]){5}[A-Fa-f0-9]{2}$,^([A-Fa-f0-9]{4}[.]){2}[A-Fa-f0-9]{4}$,^[A-Fa-f0-9]{12}$,^([A-Fa-f0-9]{2}[:-]){19}[A-Fa-f0-9]{2}$,^[A-Fa-f0-9]{40}$"
+        pattern: "^([A-Fa-f0-9]{2}[:-]){5}[A-Fa-f0-9]{2}$|^([A-Fa-f0-9]{4}[.]){2}[A-Fa-f0-9]{4}$|^[A-Fa-f0-9]{12}$|^([A-Fa-f0-9]{2}[:-]){19}[A-Fa-f0-9]{2}$|^[A-Fa-f0-9]{40}$"
         maxLength: 59
       name:
         description: Name of interface
@@ -265,6 +265,10 @@ $defs:
       operating_system:
         description: Object for OS details. Supports range operations
         type: object
+        required:
+          - major
+          - minor
+          - name
         properties:
           major:
             description: Major release of OS (aka the x version)
@@ -281,9 +285,9 @@ $defs:
           name:
             description: Name of the distro/os
             type: string
-            maxLength: 4
-            enum: [RHEL]
-            example: "RHEL, FED, RHEL"
+            maxLength: 6
+            enum: [RHEL, CentOS]
+            example: "RHEL, CentOS, RHEL"
       os_release:
         type: string
         maxLength: 100
