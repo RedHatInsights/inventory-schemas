@@ -19,7 +19,7 @@ $defs:
     type: object
     properties:
       device:
-        example: "/dev/fdd0, /dev/fdd1, /dev/fdd2"
+        example: "/dev/fdd0, /dev/sda1, /dev/nvme2"
         type: string
         maxLength: 2048
       label:
@@ -120,7 +120,7 @@ $defs:
         maximum: 18446744073709551615
       mac_address:
         description: MAC address (with or without colons)
-        example: "00:00:00:00:00:00, 10:00:00:00:00:00, 20:00:00:00:00:00"
+        example: "00:00:00:00:00:00, 100000000000, 20:00:00:00:00:00"
         type: string
         pattern: "^([A-Fa-f0-9]{2}[:-]){5}[A-Fa-f0-9]{2}$|^([A-Fa-f0-9]{4}[.]){2}[A-Fa-f0-9]{4}$|^[A-Fa-f0-9]{12}$|^([A-Fa-f0-9]{2}[:-]){19}[A-Fa-f0-9]{2}$|^[A-Fa-f0-9]{40}$"
         maxLength: 59
@@ -193,7 +193,7 @@ $defs:
         type: string
         pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
         maxLength: 36
-        example: 22cd8e39-13bb-4d02-8316-84b850dc5136, 2c68e8ec-10e2-11ec-82a8-0242ac130003, it8i99u1-48ut-1rdf-bc10-84opf904lbop
+        example: 22cd8e39-13bb-4d02-8316-84b850dc5136, ffdfd200-f5b9-4e57-b080-f5e257349df0, e2357169-f5e2-4afa-b509-ab1be3f30807
       rhc_client_id:
         description: A UUID associated with a cloud_connector
         type: string
@@ -305,7 +305,7 @@ $defs:
       arch:
         type: string
         maxLength: 50
-        example: "ARM, x86_64, null"
+        example: "ARM, x86_64, RISC-V"
       kernel_modules:
         type: array
         items:
@@ -362,7 +362,7 @@ $defs:
       insights_egg_version:
         type: string
         maxLength: 50
-        example: "ex1, ex2, ex3"
+        example: "2.3, 4.4, 5.1"
       captured_date:
         type: string
         maxLength: 32
