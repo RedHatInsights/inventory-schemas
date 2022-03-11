@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: 12.x
 
-    - run: npm i -g @stoplight/spectral
+    - run: npm i -g @stoplight/spectral-cli
     - run: spectral lint schemas/system_profile/v1.yaml
 
   test:
