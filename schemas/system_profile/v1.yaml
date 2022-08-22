@@ -116,8 +116,9 @@ $defs:
       mtu:
         description: MTU (Maximum transmission unit)
         type: integer
+        format: int32
         minimum: 0
-        maximum: 18446744073709551615
+        maximum: 2147483647
       mac_address:
         description: MAC address (with or without colons)
         example: "00:00:00:00:00:00, 100000000000, 20:00:00:00:00:00"
@@ -213,21 +214,25 @@ $defs:
         example: 'Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Intel(R) Xeon(R) CPU E9-7800 0 @ 1.90GHz, Intel(R) I7(R) CPU I7-10900k 0 @ 4.90GHz'
       number_of_cpus:
         type: integer
+        format: int32
         minimum: 0
-        maximum: 4294967295
+        maximum: 2147483647
       number_of_sockets:
         type: integer
+        format: int32
         minimum: 0
-        maximum: 4294967295
+        maximum: 2147483647
       cores_per_socket:
         type: integer
+        format: int32
         minimum: 0
-        maximum: 4294967295
+        maximum: 2147483647
       system_memory_bytes:
         type: integer
         format: int64
+        # The MAX_SAFE_INTEGER limit in JavaScript will lead to errors if we don't constrain our int64 values.
         minimum: 0
-        maximum: 18446744073709551615
+        maximum: 9007199254740991
       infrastructure_type:
         type: string
         maxLength: 100
