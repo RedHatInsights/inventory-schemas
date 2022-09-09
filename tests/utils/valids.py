@@ -47,6 +47,12 @@ VALID_SYSTEM_PROFILES = (
     {"gpg_pubkeys": ["x" * 512]},
     {"installed_services": ["x" * 512]},
     {"enabled_services": ["x" * 512]},
+    {"sap": {
+        "sap_system": True,
+        "sap_instance_number": "03",
+        "sap_version": "1.00.122.04.1478575636",
+        "sap_sids": ["H2O", "ABC", "C12"]
+    }},
     {"sap_sids": ["H2O"]},
     {"sap_sids": ["ABC"]},
     {"sap_sids": ["C12"]},
