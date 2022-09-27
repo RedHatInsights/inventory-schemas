@@ -39,59 +39,59 @@ INVALID_SYSTEM_PROFILES = (
     {"gpg_pubkeys": ["x" * 513]},
     {"installed_services": ["x" * 513]},
     {"enabled_services": ["x" * 513]},
-    {"sap": {  # Incorrect sap_version, too long
+    {"sap": {  # Incorrect version, too long
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.147857563665464",
-        "sap_sids": ["H2O"]
+        "instance_number": "03",
+        "version": "1.00.122.04.147857563665464",
+        "sids": ["H2O"]
     }},
-    {"sap": {  # Incorrect sap_version, invalid symbols
+    {"sap": {  # Incorrect version, invalid symbols
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1-00v122=04a1478575636",
-        "sap_sids": ["H2O"]
+        "instance_number": "03",
+        "version": "1-00v122=04a1478575636",
+        "sids": ["H2O"]
     }},
-    {"sap": {  # Incorrect sap_instance_number value
+    {"sap": {  # Incorrect instance_number value
         "sap_system": True,
-        "sap_instance_number": "300",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["H2O"]
+        "instance_number": "300",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["H2O"]
     }},
     {"sap": {  # Incorrect sap_system value
         "sap_system": "x",
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["H2O"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["H2O"]
     }},
-    {"sap": {  # Incorrect sap_sids value
+    {"sap": {  # Incorrect sids value
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["XXXX"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["XXXX"]
     }},
-    {"sap": {  # Incorrect sap_sids value
+    {"sap": {  # Incorrect sids value
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["XX"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["XX"]
     }},
-    {"sap": {  # Incorrect sap_sids value
+    {"sap": {  # Incorrect sids value
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["123"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["123"]
     }},
-    {"sap": {  # Incorrect sap_sids value
+    {"sap": {  # Incorrect sids value
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["abc"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["abc"]
     }},
-    {"sap": {  # Incorrect sap_sids value
+    {"sap": {  # Incorrect sids value
         "sap_system": True,
-        "sap_instance_number": "03",
-        "sap_version": "1.00.122.04.1478575636",
-        "sap_sids": ["ABC", "ABC"]
+        "instance_number": "03",
+        "version": "1.00.122.04.1478575636",
+        "sids": ["ABC", "ABC"]
     }},
     {"sap_sids": ["XXXX"]},
     {"sap_sids": ["XX"]},
