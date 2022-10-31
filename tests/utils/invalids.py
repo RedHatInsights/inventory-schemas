@@ -323,5 +323,5 @@ INVALID_SYSTEM_PROFILES = (
     {"mssql": { # Too long
         "version": "x" * 35,
     }},
-    {"update_method": "inv_method"}
+    {"system_update_method": "inv_method"}
 )

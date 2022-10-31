@@ -128,5 +128,5 @@ VALID_SYSTEM_PROFILES = (
     {"mssql": {
         "version": "15.3",
     }},
-    {"update_method": "yum"}
+    {"system_update_method": "yum"}
 )
