@@ -81,6 +81,7 @@ VALID_SYSTEM_PROFILES = (
     {"is_marketplace": True},
     {"yum_repos": [{"gpgcheck": True}]},
     {"yum_repos": [{"enabled": False}]},
+    {"yum_repos": [{"mirrorlist": "https://rhui.redhat.com/pulp/mirror/content/dist/rhel8/rhui/$releasever/$basearch/baseos/os"}]},
     {"installed_packages_delta": ["x" * 512]},
     {"host_type": "edge"},
     {"greenboot_status": "red"},

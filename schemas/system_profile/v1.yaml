@@ -65,6 +65,13 @@ $defs:
         format: uri
         maxLength: 2048
         example: "abc, dfg, pop"
+      mirrorlist:
+        description: URL of a mirrorlist for the repository
+        type: string
+        format: uri
+        maxLength: 2048
+        example:
+          https://rhui.redhat.com/pulp/mirror/content/dist/rhel8/rhui/$releasever/$basearch/baseos/os
   DnfModule:
     description: Representation of one DNF module
     type: object
