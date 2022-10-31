@@ -573,6 +573,6 @@ $defs:
       system_update_method:
         description: System update method
         type: string
-        maxLength: 10 # right a test with 11 chars
+        maxLength: 
         enum: [dnf, rpm-ostree, yum]
-        example: "dnf, rpm-ostree, yum"
+        example: "rpm-ostree"
