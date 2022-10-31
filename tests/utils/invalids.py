@@ -323,4 +323,5 @@ INVALID_SYSTEM_PROFILES = (
     {"mssql": { # Too long
         "version": "x" * 35,
     }}
+    {"update_method": "inv_method"}, # wrong enum value and longer than max length
 )
