@@ -489,7 +489,7 @@ $defs:
         enum: [edge]
         maxLength: 4
         description: Indicates the type of host.
-        example: 'edge, None, edge'
+        example: 'edge, None'
       greenboot_status:
         type: string
         enum: [red, green]
