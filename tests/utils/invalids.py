@@ -126,11 +126,11 @@ INVALID_SYSTEM_PROFILES = (
     {"network_interfaces": [{"ipv6_addresses": "0123:4567:89ab:cdef:0123:4567:89ab:cdef"}]},
     {"network_interfaces": [{"mtu": "15"}]},
     {"rhsm": {"version": "x" * 300}},
-    {"operating_system": {"name": "RHEL"}}, # Incomplete OS definition
-    {"operating_system": {"name": "RHEL", "major": 9}}, # Incomplete OS definition
-    {"operating_system": {"major": 8, "minor": 7}}, # Incomplete OS definition
-    {"operating_system": {"name": "ABCD", "major": 9, "minor": 0}}, # Invalid name    
-    {"operating_system": {"name": "RHEL", "major": "9", "minor": "0"}}, # Invalid types
+    {"operating_system": {"name": "RHEL"}},  # Incomplete OS definition
+    {"operating_system": {"name": "RHEL", "major": 9}},  # Incomplete OS definition
+    {"operating_system": {"major": 8, "minor": 7}},  # Incomplete OS definition
+    {"operating_system": {"name": "ABCD", "major": 9, "minor": 0}},  # Invalid name
+    {"operating_system": {"name": "RHEL", "major": "9", "minor": "0"}},  # Invalid types
     {"katello_agent_running": "False"},
     {"satellite_managed": "True"},
     {"is_marketplace": "True"},
@@ -302,28 +302,28 @@ INVALID_SYSTEM_PROFILES = (
         "role": "bar",
         "sla": "baz",
     }},
-    {"ansible": { # wrong data type for controller_version
+    {"ansible": {  # wrong data type for controller_version
         "controller_version": 1.0,
         "hub_version": "3.4.1",
         "catalog_worker_version": "100.387.9846.12",
         "sso_version": "1.28.3.52641.10000513168495123",
     }},
-    {"ansible": { # sso_version too long
+    {"ansible": {  # sso_version too long
         "controller_version": "1.0",
         "hub_version": "3.4.1",
         "catalog_worker_version": "100.387.9846.12",
         "sso_version": "1.4"*11,
     }},
-    {"ansible": { # don't send "existence" booleans in place of versions
+    {"ansible": {  # don't send "existence" booleans in place of versions
         "controller_version": True,
         "hub_version": False,
         "catalog_worker_version": False,
         "sso_version": False,
     }},
-    {"mssql": { # Must be a string, not a number
+    {"mssql": {  # Must be a string, not a number
         "version": 15.3,
     }},
-    {"mssql": { # Too long
+    {"mssql": {  # Too long
         "version": "x" * 35,
     }},
     {"system_update_method": "inv_method"}

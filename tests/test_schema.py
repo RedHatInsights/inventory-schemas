@@ -25,10 +25,11 @@ class SystemProfileTests(TestCase):
         for system_profile in INVALID_SYSTEM_PROFILES:
             with self.subTest(system_profile=system_profile):
                 with pytest.raises(ValidationError):
-                    CustomDraft4Validator(self.specification["$defs"]["SystemProfile"], resolver=self.resolver).validate(system_profile)
+                    CustomDraft4Validator(self.specification["$defs"]["SystemProfile"],
+                                          resolver=self.resolver).validate(system_profile)
 
     def test_system_profile_valids(self):
         for system_profile in VALID_SYSTEM_PROFILES:
             with self.subTest(system_profile=system_profile):
-                CustomDraft4Validator(self.specification["$defs"]["SystemProfile"], resolver=self.resolver).validate(system_profile)
-
+                CustomDraft4Validator(self.specification["$defs"]["SystemProfile"],
+                                      resolver=self.resolver).validate(system_profile)
