@@ -593,3 +593,8 @@ $defs:
         maxLength: 10
         enum: [dnf, rpm-ostree, yum]
         example: "dnf, rpm-ostree, yum"
+      test_field_do_not_merge:
+        description: This field is being added to a draft PR to test the SP Validator job and should not be merged.
+        type: string
+        maxLength: 10
+        example: "donotmerge"
