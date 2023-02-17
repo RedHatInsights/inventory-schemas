@@ -593,3 +593,9 @@ $defs:
         maxLength: 10
         enum: [dnf, rpm-ostree, yum]
         example: "dnf, rpm-ostree, yum"
+      test_field:
+        description: Field created to test the SP validator job (DO NOT MERGE)
+        type: string
+        maxLength: 3
+        enum: [foo, bar]
+        example: "foo, bar"
