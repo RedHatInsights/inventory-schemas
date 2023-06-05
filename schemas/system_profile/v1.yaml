@@ -291,12 +291,12 @@ $defs:
             enum: [initializing, starting, running, degraded, maintenance, stopping]
             example: 'initializing, starting, running, degraded, maintenance, stopping'
           jobs_queued:
-            description: The nomber of jobs jobs_queued
+            description: The number of jobs jobs_queued
             example: 4
             type: integer
             minimum: 0
           failed:
-            description: The nomber of jobs failed
+            description: The number of jobs failed
             example: 1
             type: integer
             minimum: 0
