@@ -35,6 +35,7 @@ VALID_SYSTEM_PROFILES = (
     {"subscription_auto_attach": "x" * 100},
     {"cloud_provider": "x" * 100},
     {"public_ipv4_addresses": ["123.123.123.123"]},
+    {"public_dns": ["x" * 100]},
     {"yum_repos": [{"id": "x" * 256}]},
     {"yum_repos": [{"name": "x" * 1024}]},
     {"yum_repos": [{"base_url": "x" * 2048}]},
