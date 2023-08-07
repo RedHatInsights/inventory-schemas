@@ -27,6 +27,7 @@ INVALID_SYSTEM_PROFILES = (
     {"subscription_auto_attach": ["x" * 101]},
     {"cloud_provider": ["x" * 101]},
     {"public_ipv4_addresses": ["x" * 16]},
+    {"public_dns": ["x" * 101]},
     {"yum_repos": [{"id": "x" * 257}]},
     {"yum_repos": [{"name": "x" * 1025}]},
     {"yum_repos": [{"base_url": "x" * 2049}]},
