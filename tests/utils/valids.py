@@ -80,6 +80,7 @@ VALID_SYSTEM_PROFILES = (
     {"rhsm": {"version": "99Server"}},
     {"operating_system": {"name": "RHEL", "major": 8, "minor": 10}},
     {"operating_system": {"name": "CentOS", "major": 7, "minor": 0}},
+    {"operating_system": {"name": "CentOS Linux", "major": 7, "minor": 0}},
     {"katello_agent_running": False},
     {"satellite_managed": True},
     {"is_marketplace": True},
