@@ -324,8 +324,8 @@ $defs:
             description: Name of the distro/os
             type: string
             maxLength: 6
-            enum: [RHEL, CentOS]
-            example: "RHEL, CentOS, RHEL"
+            enum: [RHEL, CentOS, CentOS Linux]
+            example: "RHEL, CentOS, CentOS Linux, RHEL"
       os_release:
         type: string
         maxLength: 100
