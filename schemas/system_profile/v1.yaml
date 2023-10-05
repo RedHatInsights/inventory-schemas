@@ -234,6 +234,11 @@ $defs:
         format: int32
         minimum: 0
         maximum: 2147483647
+      threads_per_core:
+        type: integer
+        format: int32
+        minimum: 0
+        maximum: 2147483647
       system_memory_bytes:
         type: integer
         format: int64
