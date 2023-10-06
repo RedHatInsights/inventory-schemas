@@ -307,6 +307,14 @@ $defs:
             example: 1
             type: integer
             minimum: 0
+          failed_services:
+            description: List of all failed jobs.
+            type: array
+            items:
+              description: The name of a failed job.
+              maxLength: 1000
+              type: string
+              example: "ex1, ex2, ex3"
       operating_system:
         description: Object for OS details. Supports range operations
         type: object
