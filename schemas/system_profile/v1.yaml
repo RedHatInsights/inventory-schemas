@@ -235,7 +235,7 @@ $defs:
         minimum: 0
         maximum: 2147483647
       threads_per_core:
-        description: Number of CPU threads per CPU core. Typical values: 1, 2, 4
+        description: "Number of CPU threads per CPU core. Typical values: 1, 2, 4"
         type: integer
         format: int32
         minimum: 0
