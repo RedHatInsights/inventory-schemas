@@ -55,7 +55,8 @@ VALID_SYSTEM_PROFILES = (
         "sap_system": True,
         "instance_number": "03",
         "version": "1.00.122.04.1478575636",
-        "sids": ["H2O", "ABC", "C12"]}},
+        "sids": ["H2O", "ABC", "C12"]
+    }},
     {"tuned_profile": "x"*256},
     {"selinux_current_mode": "enforcing"},
     {"selinux_config_file": "permissive"},
