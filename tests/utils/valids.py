@@ -136,5 +136,29 @@ VALID_SYSTEM_PROFILES = (
     {"mssql": {
         "version": "15.3",
     }},
-    {"system_update_method": "yum"}
+    {"system_update_method": "yum"},
+    {"identity_domain": {
+        "default_realm": "IPA.EXAMPLE",
+        "dns_lookup_realm": True,
+        "dns_lookup_kdc": True,
+        "domains": [
+            {
+                "name": "ipa.example",
+                "domain_type": "IPA",
+                "server_software": "IPA",
+                "client_software": "SSSD",
+                "domain": "ipa.example",
+                "realm": "IPA.EXAMPLE",
+                "ipa_mode": "server",
+            }, {
+                "name": "windows.example",
+                "domain_type": "Active Directory (winbind)",
+                "server_software": "Active Directory",
+                "client_software": "winbind",
+                "domain": "windows.example",
+                "realm": "WINDOWS.EXAMPLE",
+                "workgroup": "WINDOWS",
+            },
+        ]
+    }},
 )
