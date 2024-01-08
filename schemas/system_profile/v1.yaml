@@ -191,6 +191,62 @@ $defs:
         description: Whether the deployment is currently pinned
         type: boolean
         example: false
+  IdentityDomain:
+    title: IdentityDomain
+    description: Representation of an identity domain such as RHEL IdM (IPA), Active Directory, or Kerberos/LDAP
+    type: object
+    required: ["name", "domain_type", "server_software", "client_software"]
+    properties:
+      name:
+        description: The name of the identity domain, typically the same as the domain name
+        type: string
+        example: ipa.example
+        minLength: 1
+        maxLength: 253
+      domain_type:
+        description: The domain type
+        type: string
+        maxLength: 26
+        enum: [IPA, Active Directory (SSSD), Active Directory (winbind), LDAP, LDAP/Kerberos, Kerberos]
+        example: 'IPA, Active Directory (SSSD), Active Directory (winbind), LDAP, LDAP/Kerberos, Kerberos'
+        x-indexed: false
+      server_software:
+        description: The server software of the identity domain
+        type: string
+        maxLength: 21
+        enum: [IPA, Active Directory, generic LDAP, generic LDAP/Kerberos, generic Kerberos]
+        example: 'IPA, Active Directory, generic LDAP, generic LDAP/Kerberos, generic Kerberos'
+      client_software:
+        description: The client software of the identity domain
+        type: string
+        maxLength: 8
+        enum: [SSSD, winbind, Kerberos]
+        example: 'SSSD, winbind, Kerberos'
+      domain:
+        description: The domain name, typically a lower-case DNS domain (IPA and AD)
+        type: string
+        example: ipa.example
+        minLength: 1
+        maxLength: 253
+      realm:
+        description: The Kerberos realm name, typically upper-case domain name (IPA, AD, Kerberos)
+        type: string
+        example: IPA.EXAMPLE
+        minLength: 1
+        maxLength: 253
+      workgroup:
+        description: The Windows workgroup name (winbind-only)
+        type: string
+        example: WINDOWS
+        x-indexed: false
+        minLength: 1
+        maxLength: 15
+      ipa_mode:
+        description: Whether system is an IPA client or server (IPA-only)
+        type: string
+        maxLength: 6
+        enum: [client, server]
+        example: 'client, server'
   SystemProfile:
     title: SystemProfile
     description: Representation of the system profile fields
@@ -656,3 +712,26 @@ $defs:
         pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
         maxLength: 36
         example: 0ddf52cb-94e3-4ada-bdf7-d424a547b671, 6996463b-c9d4-402b-ad37-8ab5556ddf88, 0c352918-fa05-4f05-996c-6c43ec0b3c5e
+      identity_domain:
+        description: Configured identity domains (RHEL IdM (IPA), Active Directory, generic Kerberos or LDAP)
+        type: object
+        required: ["domains"]
+        properties:
+          default_realm:
+            description: Default Kerberos realm name from krb5.conf
+            type: string
+            example: IPA.EXAMPLE
+            minLength: 1
+            maxLength: 253
+          dns_lookup_realm:
+            description: Whether DNS lookup of realms are enabled in krb5.conf
+            type: boolean
+            x-indexed: false
+          dns_lookup_kdc:
+            description: Whether DNS lookup of Kerberos KDCs are enabled in krb5.conf
+            type: boolean
+            x-indexed: false
+          domains:
+            type: array
+            items:
+              "$ref": "#/$defs/IdentityDomain"

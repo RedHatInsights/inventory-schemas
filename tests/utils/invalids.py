@@ -328,5 +328,15 @@ INVALID_SYSTEM_PROFILES = (
     {"mssql": {  # Too long
         "version": "x" * 35,
     }},
-    {"system_update_method": "inv_method"}
+    {"system_update_method": "inv_method"},
+    {"identity_domain": {
+        "domains": [
+            {
+                "name": "ipa.example",
+                "domain_type": "IPA",
+                "server_software": "invalid software",
+                "client_software": "SSSD",
+            },
+        ],
+    }},
 )
