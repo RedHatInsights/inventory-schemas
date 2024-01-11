@@ -143,6 +143,13 @@ VALID_SYSTEM_PROFILES = (
         "catalog_worker_version": "100.387.9846.12",
         "sso_version": "1.28.3.52641.10000513168495123"
     }},
+    {"intersystems": {
+        "is_intersystems": True,
+        "running_instances": [{
+            'instance_name': 'IRIS',
+            'product': 'IRIS',
+            'version': '2023.1'}],
+    }},
     {"mssql": {
         "version": "15.3",
     }},

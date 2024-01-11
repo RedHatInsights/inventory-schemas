@@ -338,6 +338,34 @@ INVALID_SYSTEM_PROFILES = (
         "catalog_worker_version": False,
         "sso_version": False,
     }},
+    {"intersystems": {  # Incorrect is_intersystems value
+        "is_intersystems": "x",
+        "running_instances": [{
+            "instance_name": "IRIS1",
+            "product": "IRIS",
+            "version": "2023.1"}],
+    }},
+    {"intersystems": {  # Incorrect instance_name value
+        "is_intersystems": True,
+        "running_instances": [{
+            "instance_name": "x" * 300,
+            "product": "IRIS",
+            "version": "2023.1"}],
+    }},
+    {"intersystems": {  # Incorrect product value
+        "is_intersystems": True,
+        "running_instances": [{
+            "instance_name": "IRIS1",
+            "product": "x" * 100,
+            "version": "2023.1"}],
+    }},
+    {"intersystems": {  # Incorrect version value
+        "is_intersystems": True,
+        "running_instances": [{
+            "instance_name": "IRIS1",
+            "product": "IRIS",
+            "version": "2023-1-2"}],
+    }},
     {"mssql": {  # Must be a string, not a number
         "version": 15.3,
     }},
