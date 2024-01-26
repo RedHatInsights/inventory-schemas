@@ -57,8 +57,8 @@ When contributing a new field to the system_profile schema, please ensure you co
 ### Stakeholders ###
 
 - RHSM - [Kevin Howell](https://github.com/kahowell)
-- Yupana - [Chris Duryee](https://github.com/beav)
-- Puptoo - [Stephen Adams](https://github.com/stevehnh)
+- Yupana - [Jaylin Zhou](https://github.com/koalakangaroo), [Xiangce Liu](https://github.com/xiangce)
+- Puptoo - [Jaylin Zhou](https://github.com/koalakangaroo), [Xiangce Liu](https://github.com/xiangce)
 - BU - [Jerome Marc](https://github.com/jeromemarc)
 
 [Host Inventory]: https://github.com/RedHatInsights/insights-host-inventory/
