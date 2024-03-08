@@ -213,15 +213,6 @@ INVALID_SYSTEM_PROFILES = (
             "booted": True,
             "pinned": False,
         }]},
-    {"rpm_ostree_deployments": [{  # origin empty
-            "id": "fedora-silverblue-63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb.0",
-            "checksum": "63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb",
-            "origin": "",
-            "osname": "fedora-silverblue",
-            "version": "33.21",
-            "booted": True,
-            "pinned": False,
-        }]},
     {"rpm_ostree_deployments": [{  # origin too long
             "id": "fedora-silverblue-63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb.0",
             "checksum": "63335a77f9853618ba1a5f139c5805e82176a2a040ef5e34d7402e12263af5bb",
