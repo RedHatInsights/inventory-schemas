@@ -294,6 +294,8 @@ INVALID_SYSTEM_PROFILES = (
         "booted": {
             "image": "x" * 129,
             "image_digest": "sha256:806d77394f96e47cf99b1233561ce970c94521244a2d8f2affa12c3261961223",
+            "cached_image": "x" * 129,
+            "cached_image_digest": "sha256:654275229d342b2836dcb8e5b851bbb1461b664a9fb9b8c934011e1abf15d778",
         },
         "rollback": {
             "image": "quay.io/centos-bootc/fedora-bootc-cloud:eln",
