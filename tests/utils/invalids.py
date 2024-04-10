@@ -363,5 +363,8 @@ INVALID_SYSTEM_PROFILES = (
     {"mssql": {  # Too long
         "version": "x" * 35,
     }},
-    {"system_update_method": "inv_method"}
+    {"system_update_method": "inv_method"},
+    {"conversions": {  # Must be a boolean, not a string
+        "activity": "wrong"
+    }}
 )
