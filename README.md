@@ -48,7 +48,7 @@ When contributing a new field to the system_profile schema, please ensure you co
 
 3. If the report seems satisfactory and there are no more concerns, a repository maintainer will merge the PR.
 
-4. In the event that the report is unsatisfactory (e.g. it shows a high number of failures from one or multiple reporters), the PR owner must coordinate with the repository maintainers and the stakeholders from the reporter(s) that show failures. Together, they must decide whether to change the PR or to update the reporter(s).
+4. In the event that the report is unsatisfactory (e.g. it shows a high number of failures from one or multiple reporters), the PR owner must coordinate with the repository maintainers and the stakeholders from the reporter(s) that show failures. Together, they must decide whether to change the PR or to update the reporter.
 
 5. If the pull request only adds new fields there is no need to generate a report since the database will not contain values to compare against for the new fields. A repository maintainer will help in getting consensus with the schema [Stakeholders](#stakeholders) before merging the PR.
 
