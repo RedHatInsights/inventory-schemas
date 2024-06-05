@@ -188,8 +188,10 @@ VALID_SYSTEM_PROFILES = (
     {"conversions": {
         "activity": True
     }},
-    {"crowdstrike": {
-        "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
-        "falcon_backend": "kernel"
+    {"third_party_services": {
+        "crowdstrike": {
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
+            "falcon_backend": "kernel"
+        }
     }}
 )

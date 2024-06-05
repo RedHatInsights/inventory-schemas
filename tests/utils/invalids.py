@@ -369,12 +369,16 @@ INVALID_SYSTEM_PROFILES = (
     {"conversions": {  # Must be a boolean, not a string
         "activity": "wrong"
     }},
-    {"crowdstrike": {  # Too long falcon_aid
-        "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8bx",
-        "falcon_backend": "kernel"
+    {"third_party_services": {
+        "crowdstrike": {  # Too long falcon_aid
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8bx",
+            "falcon_backend": "kernel"
+        }
     }},
-    {"crowdstrike": {  # Must be a string, not a boolean
-        "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
-        "falcon_backend": True
+    {"third_party_services": {
+        "crowdstrike": {  # Must be a string, not a boolean
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
+            "falcon_backend": True
+        }
     }}
 )
