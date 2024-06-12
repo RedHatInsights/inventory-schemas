@@ -187,5 +187,11 @@ VALID_SYSTEM_PROFILES = (
     {"system_update_method": "yum"},
     {"conversions": {
         "activity": True
+    }},
+    {"third_party_services": {
+        "crowdstrike": {
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
+            "falcon_backend": "kernel"
+        }
     }}
 )
