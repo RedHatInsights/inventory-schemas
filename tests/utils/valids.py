@@ -191,7 +191,8 @@ VALID_SYSTEM_PROFILES = (
     {"third_party_services": {
         "crowdstrike": {
             "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
-            "falcon_backend": "kernel"
+            "falcon_backend": "kernel",
+            "falcon_version": "7.14.16703.0"
         }
     }}
 )
