@@ -372,13 +372,19 @@ INVALID_SYSTEM_PROFILES = (
     {"third_party_services": {
         "crowdstrike": {  # Too long falcon_aid
             "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8bx",
-            "falcon_backend": "kernel"
+            "falcon_backend": "kernel",
+            "falcon_version": "7.14.16703.0"
         }
     }},
     {"third_party_services": {
         "crowdstrike": {  # Must be a string, not a boolean
             "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
-            "falcon_backend": True
+            "falcon_backend": True,
+        }
+    }},
+    {"third_party_services": {
+        "crowdstrike": {  # Must be a string, not a boolean
+            "falcon_version": True,
         }
     }}
 )
