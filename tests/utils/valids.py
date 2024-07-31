@@ -188,6 +188,12 @@ VALID_SYSTEM_PROFILES = (
     {"conversions": {
         "activity": True
     }},
+    {"rhel_ai": {
+        "variant_id": "rhel_ai",
+        "variant": "RHEL AI",
+        "rhel_ai_version_id": "v1.1.3",
+        "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+    }},
     {"third_party_services": {
         "crowdstrike": {
             "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",

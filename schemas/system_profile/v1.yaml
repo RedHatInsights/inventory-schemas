@@ -780,6 +780,34 @@ $defs:
             type: boolean
             x-indexed: false
             example: true
+      rhel_ai:
+        description: Object containing information about RHEL AI
+        type: object
+        properties:
+          variant_id:
+            description: RHEL AI VARIANT_ID
+            type: string
+            example: "rhel_ai"
+            maxLength: 16
+            pattern: "^[a-z0-9\\-_.]+$"
+          variant:
+            description: RHEL AI VARIANT
+            type: string
+            example: "RHEL AI"
+            maxLength: 16
+          rhel_ai_version_id:
+            description: RHEL AI VERSION ID
+            type: string
+            example: "v1.1.3"
+            maxLength: 16
+          nvidia_gpu_models:
+            description: Model name of Nvidia GPUs in the GPU index order
+            type: array
+            items:
+              description: The Nvidia GPU model
+              type: string
+              example: "NVIDIA T1000, Tesla V100-PCIE-16GB"
+              maxLength: 64
       third_party_services:
         description: Object containing information about system facts of third party services
         type: object
