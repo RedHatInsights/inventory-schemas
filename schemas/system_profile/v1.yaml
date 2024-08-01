@@ -784,12 +784,6 @@ $defs:
         description: Object containing information about RHEL AI
         type: object
         properties:
-          variant_id:
-            description: RHEL AI VARIANT_ID
-            type: string
-            example: "rhel_ai"
-            maxLength: 16
-            pattern: "^[a-z0-9\\-_.]+$"
           variant:
             description: RHEL AI VARIANT
             type: string

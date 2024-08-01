@@ -189,7 +189,6 @@ VALID_SYSTEM_PROFILES = (
         "activity": True
     }},
     {"rhel_ai": {
-        "variant_id": "rhel_ai",
         "variant": "RHEL AI",
         "rhel_ai_version_id": "v1.1.3",
         "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
