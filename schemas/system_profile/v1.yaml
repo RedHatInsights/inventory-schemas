@@ -788,7 +788,7 @@ $defs:
             description: RHEL AI VARIANT
             type: string
             example: "RHEL AI"
-            maxLength: 16
+            maxLength: 7
           rhel_ai_version_id:
             description: RHEL AI VERSION ID
             type: string
