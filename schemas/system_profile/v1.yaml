@@ -800,7 +800,7 @@ $defs:
             items:
               description: The Nvidia GPU model
               type: string
-              example: "NVIDIA T1000, Tesla V100-PCIE-16GB"
+              example: "Tesla V100-PCIE-16GB"
               maxLength: 64
       third_party_services:
         description: Object containing information about system facts of third party services
