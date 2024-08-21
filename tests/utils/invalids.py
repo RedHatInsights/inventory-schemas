@@ -369,6 +369,16 @@ INVALID_SYSTEM_PROFILES = (
     {"conversions": {  # Must be a boolean, not a string
         "activity": "wrong"
     }},
+    {"rhel_ai": { # Must be a string, not a number
+        "variant": "RHEL AI",
+        "rhel_ai_version_id": 1.1,
+        "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+    }},
+    {"rhel_ai": { # Must be a string as array elements, not a boolean
+        "variant": "RHEL AI",
+        "rhel_ai_version_id": "v1.1.3",
+        "nvidia_gpu_models": [True, "Tesla V100-PCIE-16GB"]
+    }},
     {"third_party_services": {
         "crowdstrike": {  # Too long falcon_aid
             "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8bx",
