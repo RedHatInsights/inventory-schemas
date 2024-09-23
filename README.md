@@ -24,7 +24,6 @@ When contributing a new field to the system_profile schema, please ensure you co
     - Add an example of the value(s) you expect to receive using the `example` keyword. For string fields, provide at least 2 unique examples.
     - Add a description of the field. If the field should support `range` or `wildcard` operations when queried against, note that here.
 3. Add filtering flags
-    - If the field should NOT be indexed for filtering, add `x-indexed: false`. Defaults to `true` otherwise.
     - If the field should support wildcard operations in filtering, add `x-wildcard: true`. Defaults to `false` otherwise.
 4. Validate the field
     - The field should have the strictest possible validation rules applied to it.
