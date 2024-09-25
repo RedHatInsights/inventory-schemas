@@ -396,5 +396,17 @@ INVALID_SYSTEM_PROFILES = (
         "crowdstrike": {  # Must be a string, not a boolean
             "falcon_version": True,
         }
+    }},
+    {"image_builder": { # Must be a string
+        "compliance_policy_id": 10,
+        "compliance_profile_id": "some_profile_id"
+    }},
+    {"image_builder": { # Must be a uuid
+        "compliance_policy_id": "definitely not a uuid",
+        "compliance_profile_id": "some_profile_id"
+    }},
+    {"image_builder": { # Must be a string
+        "compliance_policy_id": "b27443a3-078d-4ac2-bb46-ba7a8c31d21b",
+        "compliance_profile_id": 10
     }}
 )
