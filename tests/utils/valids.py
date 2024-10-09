@@ -199,5 +199,9 @@ VALID_SYSTEM_PROFILES = (
             "falcon_backend": "kernel",
             "falcon_version": "7.14.16703.0"
         }
+    }},
+    {"image_builder": {
+        "compliance_policy_id": "b27443a3-078d-4ac2-bb46-ba7a8c31d21b",
+        "compliance_profile_id": "some_profile_id"
     }}
 )
