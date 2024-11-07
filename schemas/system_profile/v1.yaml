@@ -769,9 +769,60 @@ $defs:
         type: object
         properties:
           activity:
-            description: Whether the conversion activity has been done or not
-            type: boolean
-            example: true
+            description: 'conversion' for an attempted conversion to RHEL and 'analysis' for an attempted pre-conversion analysis
+            type: string
+            example: "conversion, analysis"
+          activity_started:
+            description: UTC timestamp of when the activity started
+            type: string
+            example: "2024-07-11T17:28:54.281664Z"
+          activity_ended:
+            description: UTC timestamp of when the activity started
+            type: string
+            example: "2024-07-11T17:48:47.026664Z"
+          success:
+            description: Whether the activity has finished successfully or not
+            type: string
+            # Ideally should have been boolean - discussed under https://github.com/RedHatInsights/inventory-schemas/pull/129
+            example: "true, false"
+          source_os:
+            description: Name and version of the Linux distribution that's being converted to RHEL
+            type: object
+            properties:
+              name:
+                description: Name of the Linux distribution that's being converted to RHEL
+                type: string
+                example: "AlmaLinux, Oracle Linux"
+              version:
+                description: Version of the Linux distribution that's being converted to RHEL
+                type: string
+                example: "8.10"
+          target_os:
+            description: Name and version of RHEL to which the system is being converted to
+            type: object
+            properties:
+              name:
+                description: Target Linux distribution
+                type: string
+                example: "Red Hat Enterprise Linux"
+              version:
+                description: What version of RHEL the system is being converted to
+                type: string
+                example: "8.10"
+          convert2rhel_through_foreman:
+            description: Whether the activity has been performed using a Red Hat Satellite conversion job template. If not the property is not present.
+            type: integer
+            format: int16
+            minimum: 1
+            maximum: 1
+          packages_0_nevra:
+            description: convert2rhel rpm name, epoch, version, release, and architecture
+            type: string
+            example: "convert2rhel-0:2.0.0-1.el8.noarch"
+          packages_0_signature:
+            description: The convert2rhel rpm signature
+            type: string
+            example: "RSA/SHA256, Thu May 30 13:31:33 2024, Key ID 199e2f91fd431d51"
       rhel_ai:
         description: Object containing information about RHEL AI
         type: object

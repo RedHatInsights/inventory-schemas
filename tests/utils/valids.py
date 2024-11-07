@@ -186,7 +186,21 @@ VALID_SYSTEM_PROFILES = (
     }},
     {"system_update_method": "yum"},
     {"conversions": {
-        "activity": True
+        "source_os": {
+          "name": "AlmaLinux",
+          "version": "8.10"
+        },
+        "target_os": {
+          "name": "Red Hat Enterprise Linux",
+          "version": "8.10"
+        },
+        "convert2rhel_through_foreman": 1,
+        "activity": "conversion",
+        "packages_0_nevra": "convert2rhel-0:2.0.0-1.el8.noarch",
+        "packages_0_signature": "RSA/SHA256, Thu May 30 13:31:33 2024, Key ID 199e2f91fd431d51",
+        "activity_started": "2024-07-11T17:28:54.281664Z",
+        "activity_ended": "2024-07-11T17:48:47.026664Z",
+        "success": "true"
     }},
     {"rhel_ai": {
         "variant": "RHEL AI",
