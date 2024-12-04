@@ -191,6 +191,14 @@ VALID_SYSTEM_PROFILES = (
     {"rhel_ai": {
         "variant": "RHEL AI",
         "rhel_ai_version_id": "v1.1.3",
+        "amd_gpu_models": [
+            "Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34",
+            "Advanced Micro Devices, Inc. [AMD/ATI] Radeon PRO V320"
+        ],
+        "intel_gaudi_hpu_models": [
+            "Habana Labs Ltd. Device 1020",
+            "Habana Labs Ltd. HL-2000 AI Training Accelerator [Gaudi]"
+        ],
         "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
     }},
     {"third_party_services": {

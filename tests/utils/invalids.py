@@ -372,11 +372,14 @@ INVALID_SYSTEM_PROFILES = (
     {"rhel_ai": { # Must be a string, not a number
         "variant": "RHEL AI",
         "rhel_ai_version_id": 1.1,
+        "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
+        "intel_gaudi_hpu_models": ["Habana Labs Ltd. Device 1020"],
         "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
     }},
     {"rhel_ai": { # Must be a string as array elements, not a boolean
         "variant": "RHEL AI",
         "rhel_ai_version_id": "v1.1.3",
+        "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
         "nvidia_gpu_models": [True, "Tesla V100-PCIE-16GB"]
     }},
     {"third_party_services": {
