@@ -78,6 +78,7 @@ VALID_SYSTEM_PROFILES = (
     {"network_interfaces": [{"ipv6_addresses": ["0123:4567:89ab:cdef:0123:4567:89ab:cdef"]}]},
     {"network_interfaces": [{"mtu": 15}]},
     {"rhsm": {"version": "99Server"}},
+    {"rhsm": {"environments": ["46b6e690cc6a4906a3c9af4bca6e507d"]}},
     {"operating_system": {"name": "RHEL", "major": 8, "minor": 10}},
     {"operating_system": {"name": "CentOS", "major": 7, "minor": 0}},
     {"operating_system": {"name": "CentOS Linux", "major": 7, "minor": 0}},
