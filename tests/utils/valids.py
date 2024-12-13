@@ -200,7 +200,7 @@ VALID_SYSTEM_PROFILES = (
         "packages_0_signature": "RSA/SHA256, Thu May 30 13:31:33 2024, Key ID 199e2f91fd431d51",
         "activity_started": "2024-07-11T17:28:54.281664Z",
         "activity_ended": "2024-07-11T17:48:47.026664Z",
-        "success": "true"
+        "success": True
     }},
     {"rhel_ai": {
         "variant": "RHEL AI",

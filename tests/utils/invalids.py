@@ -367,7 +367,7 @@ INVALID_SYSTEM_PROFILES = (
     }},
     {"system_update_method": "inv_method"},
     {"conversions": { # The activity must be either "conversion" or "analysis"
-        "activity": true,
+        "activity": True,
     }},
     {"conversions": {
         "source_os": { # The version must be a string
@@ -375,11 +375,11 @@ INVALID_SYSTEM_PROFILES = (
           "version": 8.10
         },
     }},
-    {"conversions": { # Currently must be a "true" or "false" string.
-        "success": false
+    {"conversions": { # Shall be boolean, not a stringpy
+        "success": "false"
     }},
     {"conversions": { # Must be an integer with value 1
-        "convert2rhel_through_foreman": true,
+        "convert2rhel_through_foreman": True,
     }},
     {"rhel_ai": { # Must be a string, not a number
         "variant": "RHEL AI",

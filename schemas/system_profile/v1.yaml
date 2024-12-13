@@ -782,9 +782,8 @@ $defs:
             example: "2024-07-11T17:48:47.026664Z"
           success:
             description: Whether the activity has finished successfully or not
-            type: string
-            # Ideally should have been boolean - discussed under https://github.com/RedHatInsights/inventory-schemas/pull/129
-            example: "true, false"
+            type: boolean
+            example: true
           source_os:
             description: Name and version of the Linux distribution that's being converted to RHEL
             type: object
