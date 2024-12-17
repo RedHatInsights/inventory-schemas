@@ -128,6 +128,7 @@ INVALID_SYSTEM_PROFILES = (
     {"network_interfaces": [{"ipv6_addresses": "0123:4567:89ab:cdef:0123:4567:89ab:cdef"}]},
     {"network_interfaces": [{"mtu": "15"}]},
     {"rhsm": {"version": "x" * 300}},
+    {"rhsm": {"environment_ids": [5]}}, # must be an array of strings
     {"operating_system": {"name": "RHEL"}},  # Incomplete OS definition
     {"operating_system": {"name": "RHEL", "major": 9}},  # Incomplete OS definition
     {"operating_system": {"major": 8, "minor": 7}},  # Incomplete OS definition
