@@ -601,6 +601,7 @@ $defs:
               type: string
               example: "262e621d10ae4475ab5732b39a9160b2, 01fd642e02de4e6da2da6172081a971e"
               pattern: '^.*$'
+              maxLength: 256
               
       system_purpose:
         description: Object for system purpose information
