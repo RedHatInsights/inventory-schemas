@@ -367,8 +367,20 @@ INVALID_SYSTEM_PROFILES = (
         "version": "x" * 35,
     }},
     {"system_update_method": "inv_method"},
-    {"conversions": {  # Must be a boolean, not a string
-        "activity": "wrong"
+    {"conversions": { # The activity must be either "conversion" or "analysis"
+        "activity": True,
+    }},
+    {"conversions": {
+        "source_os": { # The version must be a string
+          "name": "AlmaLinux",
+          "version": 8.10
+        },
+    }},
+    {"conversions": { # Shall be boolean, not a stringpy
+        "success": "false"
+    }},
+    {"conversions": { # Must be an integer with value 1
+        "convert2rhel_through_foreman": True,
     }},
     {"rhel_ai": { # Must be a string, not a number
         "variant": "RHEL AI",
