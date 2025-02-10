@@ -412,5 +412,192 @@ INVALID_SYSTEM_PROFILES = (
     {"image_builder": { # Must be a string
         "compliance_policy_id": "b27443a3-078d-4ac2-bb46-ba7a8c31d21b",
         "compliance_profile_id": 10
+    }},
+    {"workloads": {
+        "ansible": {  # wrong data type for controller_version
+            "controller_version": 1.0,
+            "hub_version": "3.4.1",
+            "catalog_worker_version": "100.387.9846.12",
+            "sso_version": "1.28.3.52641.10000513168495123",
+        }
+    }},
+    {"workloads": {
+        "ansible": {  # sso_version too long
+            "controller_version": "1.0",
+            "hub_version": "3.4.1",
+            "catalog_worker_version": "100.387.9846.12",
+            "sso_version": "1.4"*11,
+        }
+    }},
+    {"workloads": {
+        "ansible": {  # don't send "existence" booleans in place of versions
+            "controller_version": True,
+            "hub_version": False,
+            "catalog_worker_version": False,
+            "sso_version": False,
+        }
+    }},
+    {"workloads": {
+        "crowdstrike": {  # Too long falcon_aid
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8bx",
+            "falcon_backend": "kernel",
+            "falcon_version": "7.14.16703.0"
+        }
+    }},
+    {"workloads": {
+        "crowdstrike": {  # Must be a string, not a boolean
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
+            "falcon_backend": True,
+        }
+    }},
+    {"workloads": {
+        "crowdstrike": {  # Must be a string, not a boolean
+            "falcon_version": True,
+        }
+    }},
+    {"workloads": {
+        "ibm_db2": {  # Must be a boolean, not a string
+            "is_running": "yes",
+        }
+    }},
+    {"workloads": {
+        "intersystems": {  # Incorrect is_intersystems value
+            "is_intersystems": "x",
+            "running_instances": [{
+                "instance_name": "IRIS1",
+                "product": "IRIS",
+                "version": "2023.1"}],
+        }
+    }},
+    {"workloads": {
+        "intersystems": {  # Incorrect instance_name value
+            "is_intersystems": True,
+            "running_instances": [{
+                "instance_name": "x" * 300,
+                "product": "IRIS",
+                "version": "2023.1"}],
+        }
+    }},
+    {"workloads": {
+        "intersystems": {  # Incorrect product value
+            "is_intersystems": True,
+            "running_instances": [{
+                "instance_name": "IRIS1",
+                "product": "x" * 100,
+                "version": "2023.1"}],
+        }
+    }},
+    {"workloads": {
+        "intersystems": {  # Incorrect version value
+            "is_intersystems": True,
+            "running_instances": [{
+                "instance_name": "IRIS1",
+                "product": "IRIS",
+                "version": "2023-1-2"}],
+        }
+    }},
+    {"workloads": {
+        "mssql": {  # Must be a string, not a number
+            "version": 15.3,
+        }
+    }},
+    {"workloads": {
+        "mssql": {  # Too long
+            "version": "x" * 35,
+        }
+    }},
+    {"workloads": {
+        "oracle_db": {  # Must be a boolean, not a string
+            "is_running": "yes",
+        }
+    }},
+    {"workloads": {
+        "rhel_ai": { # Must be a string, not a number
+            "variant": "RHEL AI",
+            "rhel_ai_version_id": 1.1,
+            "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
+            "intel_gaudi_hpu_models": ["Habana Labs Ltd. Device 1020"],
+            "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+        }
+    }},
+    {"workloads": {
+        "rhel_ai": { # Must be a string as array elements, not a boolean
+            "variant": "RHEL AI",
+            "rhel_ai_version_id": "v1.1.3",
+            "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
+            "nvidia_gpu_models": [True, "Tesla V100-PCIE-16GB"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect version, too long
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.147857563665464",
+            "sids": ["H2O"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect version, invalid symbols
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1-00v122=04a1478575636",
+            "sids": ["H2O"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect instance_number value
+            "sap_system": True,
+            "instance_number": "300",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["H2O"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sap_system value
+            "sap_system": "x",
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["H2O"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sids value
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["XXXX"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sids value
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["XX"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sids value
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["123"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sids value
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["abc"]
+        }
+    }},
+    {"workloads": {
+        "sap": {  # Incorrect sids value
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["ABC", "ABC"]
+        }
     }}
 )
