@@ -128,7 +128,7 @@ INVALID_SYSTEM_PROFILES = (
     {"network_interfaces": [{"ipv6_addresses": "0123:4567:89ab:cdef:0123:4567:89ab:cdef"}]},
     {"network_interfaces": [{"mtu": "15"}]},
     {"rhsm": {"version": "x" * 300}},
-    {"rhsm": {"environment_ids": [5]}}, # must be an array of strings
+    {"rhsm": {"environment_ids": [5]}},  # must be an array of strings
     {"operating_system": {"name": "RHEL"}},  # Incomplete OS definition
     {"operating_system": {"name": "RHEL", "major": 9}},  # Incomplete OS definition
     {"operating_system": {"major": 8, "minor": 7}},  # Incomplete OS definition
@@ -370,14 +370,14 @@ INVALID_SYSTEM_PROFILES = (
     {"conversions": {  # Must be a boolean, not a string
         "activity": "wrong"
     }},
-    {"rhel_ai": { # Must be a string, not a number
+    {"rhel_ai": {  # Must be a string, not a number
         "variant": "RHEL AI",
         "rhel_ai_version_id": 1.1,
         "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
         "intel_gaudi_hpu_models": ["Habana Labs Ltd. Device 1020"],
         "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
     }},
-    {"rhel_ai": { # Must be a string as array elements, not a boolean
+    {"rhel_ai": {  # Must be a string as array elements, not a boolean
         "variant": "RHEL AI",
         "rhel_ai_version_id": "v1.1.3",
         "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
@@ -401,15 +401,15 @@ INVALID_SYSTEM_PROFILES = (
             "falcon_version": True,
         }
     }},
-    {"image_builder": { # Must be a string
+    {"image_builder": {  # Must be a string
         "compliance_policy_id": 10,
         "compliance_profile_id": "some_profile_id"
     }},
-    {"image_builder": { # Must be a uuid
+    {"image_builder": {  # Must be a uuid
         "compliance_policy_id": "definitely not a uuid",
         "compliance_profile_id": "some_profile_id"
     }},
-    {"image_builder": { # Must be a string
+    {"image_builder": {  # Must be a string
         "compliance_policy_id": "b27443a3-078d-4ac2-bb46-ba7a8c31d21b",
         "compliance_profile_id": 10
     }},
@@ -512,7 +512,7 @@ INVALID_SYSTEM_PROFILES = (
         }
     }},
     {"workloads": {
-        "rhel_ai": { # Must be a string, not a number
+        "rhel_ai": {  # Must be a string, not a number
             "variant": "RHEL AI",
             "rhel_ai_version_id": 1.1,
             "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
@@ -521,7 +521,7 @@ INVALID_SYSTEM_PROFILES = (
         }
     }},
     {"workloads": {
-        "rhel_ai": { # Must be a string as array elements, not a boolean
+        "rhel_ai": {  # Must be a string as array elements, not a boolean
             "variant": "RHEL AI",
             "rhel_ai_version_id": "v1.1.3",
             "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
