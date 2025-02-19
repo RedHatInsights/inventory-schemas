@@ -213,5 +213,53 @@ VALID_SYSTEM_PROFILES = (
     {"image_builder": {
         "compliance_policy_id": "b27443a3-078d-4ac2-bb46-ba7a8c31d21b",
         "compliance_profile_id": "some_profile_id"
+    }},
+    {"workloads": {
+        "ansible": {
+            "controller_version": "1.0",
+            "hub_version": "3.4.1",
+            "catalog_worker_version": "100.387.9846.12",
+            "sso_version": "1.28.3.52641.10000513168495123"
+        },
+        "crowdstrike": {
+            "falcon_aid": "44e3b7d20b434a2bb2815d9808fa3a8b",
+            "falcon_backend": "kernel",
+            "falcon_version": "7.14.16703.0"
+        },
+        "ibm_db2": {
+            "is_running": True,
+        },
+        "intersystems": {
+            "is_intersystems": True,
+            "running_instances": [{
+                'instance_name': 'IRIS',
+                'product': 'IRIS',
+                'version': '2023.1'}],
+        },
+        "mssql": {
+            "version": "15.3",
+        },
+        "oracle_db": {
+            "is_running": True,
+        },
+        "rhel_ai": {
+            "variant": "RHEL AI",
+            "rhel_ai_version_id": "v1.1.3",
+            "amd_gpu_models": [
+                "Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34",
+                "Advanced Micro Devices, Inc. [AMD/ATI] Radeon PRO V320"
+            ],
+            "intel_gaudi_hpu_models": [
+                "Habana Labs Ltd. Device 1020",
+                "Habana Labs Ltd. HL-2000 AI Training Accelerator [Gaudi]"
+            ],
+            "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+        },
+        "sap": {
+            "sap_system": True,
+            "instance_number": "03",
+            "version": "1.00.122.04.1478575636",
+            "sids": ["H2O", "ABC", "C12"]
+        }
     }}
 )
