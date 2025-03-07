@@ -245,15 +245,19 @@ VALID_SYSTEM_PROFILES = (
         "rhel_ai": {
             "variant": "RHEL AI",
             "rhel_ai_version_id": "v1.1.3",
-            "amd_gpu_models": [
-                "Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34",
-                "Advanced Micro Devices, Inc. [AMD/ATI] Radeon PRO V320"
-            ],
-            "intel_gaudi_hpu_models": [
-                "Habana Labs Ltd. Device 1020",
-                "Habana Labs Ltd. HL-2000 AI Training Accelerator [Gaudi]"
-            ],
-            "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+            "gpu_models": [{
+                "name": "NVIDIA L4",
+                "vendor": "Nvidia",
+                "memory": "24GB",
+                "count": 2
+            },{
+                "name": "Tesla V100-PCIE-16GB",
+                "vendor": "Nvidia",
+                "memory": "16GB",
+                "count": 4
+            }],
+            "ai_models": ["granite-7b-redhat-lab", "granite-7b-starter"],
+            "free_disk_storage": "698GB"
         },
         "sap": {
             "sap_system": True,

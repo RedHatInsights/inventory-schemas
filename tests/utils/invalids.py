@@ -515,17 +515,38 @@ INVALID_SYSTEM_PROFILES = (
         "rhel_ai": {  # Must be a string, not a number
             "variant": "RHEL AI",
             "rhel_ai_version_id": 1.1,
-            "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
-            "intel_gaudi_hpu_models": ["Habana Labs Ltd. Device 1020"],
-            "nvidia_gpu_models": ["NVIDIA T1000", "Tesla V100-PCIE-16GB"]
+            "gpu_models": [{
+                "name": "NVIDIA L4",
+                "vendor": "Nvidia",
+                "memory": "24GB",
+                "count": "2"
+            },{
+                "name": "Tesla V100-PCIE-16GB",
+                "vendor": "Nvidia",
+                "memory": "16GB",
+                "count": 4
+            }],
+            "ai_models": ["granite-7b-redhat-lab", "granite-7b-starter"],
+            "free_disk_storage": "698GB"
         }
     }},
     {"workloads": {
         "rhel_ai": {  # Must be a string as array elements, not a boolean
             "variant": "RHEL AI",
             "rhel_ai_version_id": "v1.1.3",
-            "amd_gpu_models": ["Advanced Micro Devices, Inc. [AMD/ATI] Device 0c34"],
-            "nvidia_gpu_models": [True, "Tesla V100-PCIE-16GB"]
+            "gpu_models": [{
+                "name": "NVIDIA L4",
+                "vendor": "Nvidia",
+                "memory": "24GB",
+                "count": 2
+            },{
+                "name": "Tesla V100-PCIE-16GB",
+                "vendor": "Nvidia",
+                "memory": "16GB",
+                "count": 4
+            }],
+            "ai_models": [True, "granite-7b-starter"],
+            "free_disk_storage": "698GB"
         }
     }},
     {"workloads": {
