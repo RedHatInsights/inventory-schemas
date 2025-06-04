@@ -311,7 +311,7 @@ INVALID_SYSTEM_PROFILES = (
     }},
     {"system_purpose": {
         "usage": "foo",
-        "role": "bar",
+        "role": "Red Hat Enterprise Linux Server for HPC Compute Node, Self-support (Physical or Virtual Node) - and some absurd long fake string suffix",
         "sla": "baz",
     }},
     {"ansible": {  # wrong data type for controller_version
