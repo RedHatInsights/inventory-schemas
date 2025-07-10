@@ -41,6 +41,7 @@ VALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"base_url": "x" * 2048}]},
     {"dnf_modules": [{"name": "x" * 128}]},
     {"dnf_modules": [{"stream": "x" * 2048}]},
+    {"dnf_modules": [{"name": "x", "stream": "y", "status": ["enabled"]}]},
     {"installed_products": [{"name": "x" * 512}]},
     {"installed_products": [{"id": "x" * 64}]},
     {"installed_products": [{"status": "x" * 256}]},

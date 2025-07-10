@@ -34,6 +34,7 @@ INVALID_SYSTEM_PROFILES = (
     {"yum_repos": [{"mirrorlist": "x" * 2049}]},
     {"dnf_modules": [{"name": "x" * 129}]},
     {"dnf_modules": [{"stream": "x" * 2049}]},
+    {"dnf_modules": [{"name": "x", "stream": "y", "status": ["unknown"]}]},
     {"installed_products": [{"name": "x" * 513}]},
     {"installed_products": [{"id": "x" * 65}]},
     {"installed_products": [{"status": "x" * 257}]},
