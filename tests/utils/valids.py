@@ -47,7 +47,7 @@ VALID_SYSTEM_PROFILES = (
     {"installed_products": [{"status": "x" * 256}]},
     {"insights_client_version": "x" * 50},
     {"insights_egg_version": "x" * 50},
-    {"captured_date": "x" * 32},
+    {"captured_date": "2017-07-21T17:32:28Z"},
     {"installed_packages": ["x" * 512]},
     {"gpg_pubkeys": ["x" * 512]},
     {"installed_services": ["x" * 512]},
