@@ -40,7 +40,7 @@ INVALID_SYSTEM_PROFILES = (
     {"installed_products": [{"status": "x" * 257}]},
     {"insights_client_version": "x" * 51},
     {"insights_egg_version": "x" * 51},
-    {"captured_date": "x" * 33},
+    {"captured_date": "x" * 51},
     {"installed_packages": ["x" * 513]},
     {"gpg_pubkeys": ["x" * 513]},
     {"installed_services": ["x" * 513]},
